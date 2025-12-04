@@ -26,7 +26,7 @@ analysis is to see how what happened today, and in past days, will affect what h
 morrow. Furthermore, this time series analysis will propose a statistical model that explains
 the relations of adjacent points in the gas prices that are correlated in time.
 
-(images/gas1.png)
+![Alt text](images/gas1.png)
 Figure 1. 
 
 Statistical Methods
@@ -45,7 +45,8 @@ of the gas data shows that the series is not stationary see figure 1. Differenci
 yields a stationary process such that the first difference eliminates a linear trend, the second
 difference eliminates a quadratic trend, and so on.
 
-
+![Alt text](images/gas2.png)
+Figure 2. 
 
 After taking the first difference we plot the time series, ACF and PACF. The ACF does
 not decay to zero very quickly as h increases see figure 2. A slow decay in the ACF to zero
@@ -55,5 +56,20 @@ PACF. After taking the second difference the mean is around zero and is constant
 variance is not drifting as much. As h increases the ACF decays to zero very quickly. Thus,
 the second difference has made the gas prices data stationary.
 
+The ARIMA model is a broader form of an ARMA model to include differencing. The data
+was differenced twice We know that d = 2 for the ARIMA(p,d,q). To choose values for p and q we 
+inspect the ACF and the PACF of the doubly diffenced data. The ACF seems to cut off at lag 1 and 
+the PACF seems to tail off which suggests an ARIMA(0, 2, 1) process see figure 3. Also, upon 
+inspecting the PACF we might think that it cuts off at lag 5 and the ACF tails off which would suggest 
+an ARIMA(5, 2, 0)process.
 
+Figure 3. decomposed time series 
 
+From the decomposed plots there seems to be a yearly trend, thus a seasonal ARIMA model
+may be useful. The multiplicative seasonal ARIMA model contains the usual ARMA process
+and a seasonal component. Upon inspecting the ACF at the seasons it is cut off at lag 1s
+which implies that a season is 52 weeks or a year long. Looking at the PACF at the seasons,
+it is tailing off at lags 1s, 2s, 3s, 4s... Thus, I propose a SMA(1) P = 0 , Q = 1. Inspecting
+the lower lags of the ACF and PACF for the non-seasonal component, the ACF cuts off at
+lag 1 and the PACF tails off MA(1) within the seasons so p = 0, q = 1 for the dependence
+orders. Thus, I suggest the seasonal model ARIMA(0,1,1,)x(0,1,1)52 for the gas data

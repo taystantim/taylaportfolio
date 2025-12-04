@@ -63,6 +63,7 @@ the PACF seems to tail off which suggests an ARIMA(0, 2, 1) process see figure 3
 inspecting the PACF we might think that it cuts off at lag 5 and the ACF tails off which would suggest 
 an ARIMA(5, 2, 0)process.
 
+![Alt text](images/gas3.png)
 Figure 3. decomposed time series 
 
 From the decomposed plots there seems to be a yearly trend, thus a seasonal ARIMA model
@@ -73,3 +74,18 @@ it is tailing off at lags 1s, 2s, 3s, 4s... Thus, I propose a SMA(1) P = 0 , Q =
 the lower lags of the ACF and PACF for the non-seasonal component, the ACF cuts off at
 lag 1 and the PACF tails off MA(1) within the seasons so p = 0, q = 1 for the dependence
 orders. Thus, I suggest the seasonal model ARIMA(0,1,1,)x(0,1,1)52 for the gas data
+
+Results
+
+Estimate of Parameters for the Proposed Models
+
+Applying the ARIMA(0, 2, 1) process, the parameter estimate for theta1 is -1. The magni-
+tude of theta is equal to 1 so the older observations have the same influence as the more re-
+cent observations. This violates invertiblity so this model is not useful. The second proposed
+model ARIMA(5,2,0) is an AR(5) process of the form xt = -0.7955xt-1 -0.6043xt-2 -0.3416xt-
+3 -0.1995xt-4 -0.1047xt-5 + wt. In this model, xt is forecasted using a linear combination of
+past five values of the variable. The third proposed model is the ARIMA(0,1,1)x(0,1,1)52.
+The seasonal coefficient is -1.0 for a SMA(1) process, so this model is not meaningful in the
+same way that the first model fails in being invertible. In these models xt is second difference
+of the estimation for next week’s average gas price in the New York Harbor based on the
+previous weekly gas prices.

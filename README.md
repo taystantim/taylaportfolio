@@ -4,7 +4,7 @@
 
 ### Video Project Linear 
 
-![alt text](Mini proj pres-page-1.jpg)(https://youtu.be/qNsJqWcyhRY)
+![alt text](images/Mini proj pres-page-1.jpg)(https://youtu.be/qNsJqWcyhRY)
 
 ### Result of Canadian Federal Election
 

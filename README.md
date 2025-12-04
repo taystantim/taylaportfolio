@@ -3,7 +3,7 @@
 ### Heart Disease 
 
 ### Video Project Linear 
-[![<img src="images/Mini proj pres-page-1.jpg">](https://youtu.be/qNsJqWcyhRY)](https://youtu.be/qNsJqWcyhRY)
+[![image](images/Mini proj pres-page-1.jpg)](https://youtu.be/qNsJqWcyhRY)
 
 ### Result of Canadian Federal Election
 

@@ -1,8 +1,9 @@
 # Tayla Project Portfolio
 
-### Heart Disease 
+### Heart Disease Paper
 
-### Video Project Linear 
+
+### Video Project 
 
 [<img src="images/linearscatterplots.jpg">](https://youtu.be/qNsJqWcyhRY)
 

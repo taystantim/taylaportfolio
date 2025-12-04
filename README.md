@@ -46,6 +46,7 @@ yields a stationary process such that the first difference eliminates a linear t
 difference eliminates a quadratic trend, and so on.
 
 
+
 After taking the first difference we plot the time series, ACF and PACF. The ACF does
 not decay to zero very quickly as h increases see figure 2. A slow decay in the ACF to zero
 indicates that differencing is required. Hence, we take the seocond difference to try to make

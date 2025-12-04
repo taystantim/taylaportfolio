@@ -11,10 +11,10 @@
 
 ### Gas Prices
 
-Introduction
+#### Introduction
 
 Gasoline accounts for almost half of the oil consumption in United States, and it is the
-largest single volume refined product sold in the United States(TradingEconomics). Weekly,
+largest single volume refined product sold in the United States (TradingEconomics). Weekly,
 monthly, and annual prices of gasoline are calculated by the U.S. Energy Information Ad-
 ministration by taking an unweighted average of the daily prices (EIA). The dataset that is
 analyzed in this study contains the weekly New York Harbor conventional regular gasoline
@@ -29,7 +29,7 @@ the relations of adjacent points in the gas prices that are correlated in time.
 ![Alt text](images/gas1.png)
 Figure 1. 
 
-Statistical Methods
+##### Statistical Methods
 
 Upon inspecting the plot of the gasoline data there is a clear upward trend in the time series
 see figure 1. We might use a simple linear regression to estimate the trend. The linear trend
@@ -50,16 +50,15 @@ Figure 2.
 
 After taking the first difference we plot the time series, ACF and PACF. The ACF does
 not decay to zero very quickly as h increases see figure 2. A slow decay in the ACF to zero
-indicates that differencing is required. Hence, we take the seocond difference to try to make
-the data stationary. Figure 3 shows the second difference of the time series, and its ACF and
-PACF. After taking the second difference the mean is around zero and is constant. Also, the
-variance is not drifting as much. As h increases the ACF decays to zero very quickly. Thus,
+indicates that differencing is required. Hence, we take the second difference to try to make
+the data stationary. After taking the second difference the mean is around zero and is constant. 
+Also, the variance is not drifting as much. As h increases the ACF decays to zero very quickly. Thus,
 the second difference has made the gas prices data stationary.
 
 The ARIMA model is a broader form of an ARMA model to include differencing. The data
 was differenced twice We know that d = 2 for the ARIMA(p,d,q). To choose values for p and q we 
 inspect the ACF and the PACF of the doubly diffenced data. The ACF seems to cut off at lag 1 and 
-the PACF seems to tail off which suggests an ARIMA(0, 2, 1) process see figure 3. Also, upon 
+the PACF seems to tail off which suggests an ARIMA(0, 2, 1) process see figure 2. Also, upon 
 inspecting the PACF we might think that it cuts off at lag 5 and the ACF tails off which would suggest 
 an ARIMA(5, 2, 0)process.
 
@@ -75,9 +74,9 @@ the lower lags of the ACF and PACF for the non-seasonal component, the ACF cuts 
 lag 1 and the PACF tails off MA(1) within the seasons so p = 0, q = 1 for the dependence
 orders. Thus, I suggest the seasonal model ARIMA(0,1,1,)x(0,1,1)52 for the gas data
 
-Results
+#### Results
 
-Estimate of Parameters for the Proposed Models
+##### Estimate of Parameters for the Proposed Models
 
 Applying the ARIMA(0, 2, 1) process, the parameter estimate for theta1 is -1. The magni-
 tude of theta is equal to 1 so the older observations have the same influence as the more re-
@@ -89,3 +88,88 @@ The seasonal coefficient is -1.0 for a SMA(1) process, so this model is not mean
 same way that the first model fails in being invertible. In these models xt is second difference
 of the estimation for next week’s average gas price in the New York Harbor based on the
 previous weekly gas prices.
+
+###### Model Diagnostics and the Significance of the Parameter Estimates
+To evaluate the model fits on the data we consider the standardized residuals. The assump-
+tion is that the standardized residuals are identically and independently distributed with 0
+meanandvarianceone. Wewantnormalityoftheresidualswhichwecancheckwithq-qplot.
+The Ljung-Box p-values are useful for testing the independence of the residuals. Where the
+null hypothesis is that the residuals are independent thus, obtaining large p-values suggests
+that the residuals are independent.
+
+In both of the ARIMA(0,2,1) and ARIMA(5,2,0) models all of the coefficients were significant
+by their p values in the t-tests. The ACF residuals show only 2 significant spikes but there
+are largely no apparent departures from the model randomness assumption. The normal
+qq-plot of standard residuals shows that there are no large departures from the normality
+assumption. The residuals seem normal with mean zero and constant variance, but they are
+not independent according to the Ljung-Box statistics. A few other ARIMA models were
+tested on the gas data by changing the value of the dependence orders p or q by 1. All of
+these models either failed in the p-values for the parameter estimate coefficients, or in the
+independence of the errors assumption.
+
+The proposed seasonal ARIMA(0,1,1)x(0,1,1)52 model failed in the significance of the pa-
+rameters estimate coefficents. Other seasonal ARIMA models were tested on the gas data by
+altering one dependence at a time and then checking if they satisfied the model assumptions.
+In both of the seasonal models ARIMA(1, 1, 1)x(1, 1, 2)52 and ARIMA( 2, 1, 2)x(0, 1, 1)52,
+all of the coefficients for the parameter estimates were significant. The ACF residuals show
+only 2 significant spikes so there are no apparent large departures from the randomness as-
+sumption. The normal qq-plot shows that there are no large departures from the normality
+assumption. The residuals seem normal with mean zero and constant variance. The Ljung-
+Box plot suggests that there is weak evidence against the null hypothesis since most of the
+p-values are greater than the line of significance, so the residuals are independent. 
+
+##### Model Selection
+There were two models that satisfied all of the assumptions of an ARIMA model. These
+models are ARIMA(1, 1, 1)x(1, 1, 2)52 and ARIMA( 2, 1, 2)x(0, 1, 1)52. To select between
+these two models we will consider their AIC, AICc, and BIC. These measurements compare
+their models predictive error while penalizing model with more parameters. Model 2 that is
+ARIMA( 2, 1, 2)x(0, 1, 1)52 minimizes AIC, AICc and BIC so we will choose this model to
+predict the gas prices.
+
+##### Forecast and Prediction Intervals
+The gas prices for the next ten weeks were forecasted using model2 see figure 7. The next
+10 weeks are the 26th week to the 35th week of 2010. The figure 7 includes a 95% and 90%
+prediction interval that is a range of plausible values for gas price in these 10 weeks. The
+95% prediction interval was calculated results in table 4. Due to the double differencing the
+forecasts follow the recent trend in the data. The large and quickly increasing prediction
+intervals show that the gas prices could increasing or decreasing at any time.
+
+##### Spectral analysis
+A spectral analysis was performed on the gas data to identify the first three predominant
+periods. The first three predominant periods are 5.5385, 3.6923, and 2.7692. The confidence
+intervals for the dominant periods are given in table 5. From the confidence intervals, the
+first peak is not significant as the first periodogram ordinate that is 1300.628 lies in the
+confidence intervals of the second and third peak. Tthe second periodogram ordinate that
+is 1141.463 lies in the confidence intervals of the first and third peak the significance of
+the second peak cannot be established. Also, the third peak is not significant as the third
+periodogram ordinate is in the confidence intervals of the first and second peak.
+
+#### Discussion
+
+The New York Harbor conventional regular gasoline weekly spot price may be estimated by
+a statistical seasonal ARIMA model. This model has the orders of dependence p = 2, d = 1,
+q = 2 , P = 0 , D = 1, Q = 1. Seasonal persistence occurs as the yearly gas prices are nearly
+periodic in the weeks of the year. The seasonal ARIMA model may be used to forecast gas
+prices in New York. A limitation of the study is that the model is specific to the data from
+the gas dataset which contains the average gas prices in the New York Harbor. Thus, this
+model is only applicable for forecasting average gas prices in the New York Harbor. Other
+regions have various economical and geographical differences which alter the trends in their
+gas prices. Therefore, different regions would require different models that are built from
+the gas prices in their region. Furthermore, it is unlikely that this seasonal ARIMA model
+would be able to accurately capture trends in the next 100 years or so as there are a variety
+of factors that can completely alter the trajectory of gas prices such as depression or war.
+Hence this model would need to be updated every so often to incorporate recent data for
+better prediction.
+
+#### Bibliography
+
+1. EIA. (n.d.) Energy Information Administration - EIA - independent statistics and
+analysis. About EIA - U.S. Energy Information Administration (EIA) .U.S.EnergyIn-
+formation Administration (EIA). https://www.eia.gov/about/. (Last Accessed: April
+17, 2022)
+2. Trading Economics. (n.d.) Gasoline2022 data - 2005-2021 historical - 2023 forecast
+- price - quote - chart. Gasoline - 2022 Data - 2005-2021 Historical - 2023 Forecast
+- Price - Quote - Chart.. https://tradingeconomics.com/commodity/gasoline (Last
+Accessed: April 17, 2022)
+3. YCharts. (n.d.) US Retail Gas Price. https://ycharts.com/indicators/us_gas_price.
+(Last Accessed: April 17, 2022)

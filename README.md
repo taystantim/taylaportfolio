@@ -4,7 +4,7 @@
 
 ### Video Project Linear 
 
-![alt text](images/linearscatterplots.jpg)(https://youtu.be/qNsJqWcyhRY)
+[![name](images/linearscatterplots.jpg)](https://youtu.be/qNsJqWcyhRY)
 
 ### Result of Canadian Federal Election
 

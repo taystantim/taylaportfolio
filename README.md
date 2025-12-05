@@ -1,15 +1,16 @@
 # Tayla's University Projects 
 
-### Heart Disease Paper
-
-
-### Video Project 
+## Video Project: Selecting the Best Predictor for Prices of Calfornia Homes 
 
 [<img src="images/projtitle.jpg">](https://youtu.be/qNsJqWcyhRY)
 
-### Result of Canadian Federal Election
+description
 
-### Gas Prices
+## Result of Canadian Federal Election
+
+## Heart Disease Paper
+
+## Gas Prices
 
 #### Introduction
 
@@ -29,7 +30,7 @@ combined in ARMA models, are better suited because they model relationships betw
 past values. The ARMA model regresses the present outcome xt on the past outcomes 
 (xt-l, ..., xt-p) with correlated errors.  
 
-The clear upward trend of the gas data shows that the series is not stationary see figure 1. 
+The clear upward trend of the gas data shows that the series is not stationary. 
 Differencing the data yields a stationary process such that the first difference eliminates a 
 linear trend, the second difference eliminates a quadratic trend, and so on.
 
@@ -99,12 +100,11 @@ and was selected for forecasting weekly New York Harbor gas prices.
 
 ##### Forecast and Prediction Intervals
 
-The gas prices for the next ten weeks were forecasted using the seasonal arima model. The next
+The gas prices for the next ten weeks were forecasted using the seasonal ARIMA model. The next
 10 weeks are the 26th week to the 35th week of 2010. The figure 7 includes a 95% and 90%
-prediction interval that is a range of plausible values for gas price in these 10 weeks. 
-Due to the double differencing the forecasts follow the recent trend in the data. The large and 
-quickly increasing prediction intervals show that the gas prices could increasing 
-or decreasing at any time.
+prediction interval that is a range of plausible values for gas price in these 10 weeks. The large 
+and quickly increasing prediction intervals show that the gas prices could increasing or
+decreasing at any time.
 
 ![Alt text](images/gas12.png)
 

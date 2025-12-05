@@ -1,4 +1,4 @@
-# Tayla Project Portfolio
+# Tayla's University Projects 
 
 ### Heart Disease Paper
 
@@ -13,32 +13,21 @@
 
 #### Introduction
 
-Gasoline accounts for almost half of the oil consumption in United States, and it is the
-largest single volume refined product sold in the United States (TradingEconomics). The U.S. 
-Energy Information Administration uses an unweighted average of the daily gas prices (EIA) to 
-calculate weekly, monthly, and annual gas prices. This study uses the weekly New York Harbor 
-conventional regular gasoline datasat price in cents per gallon. It includes data from 2000 to 
-mid-2010, with a total of 575 observations.
+Gasoline makes up nearly half of U.S. oil consumption and is the largest refined product sold domestically (TradingEconomics). The U.S. Energy Information Administration (EIA) reports weekly, monthly, and annual gas prices using an unweighted average of daily prices. This study analyzes the weekly New York Harbor conventional regular gasoline dataset (in cents per gallon), covering 2000 to mid-2010 with 575 observations.
 
-A random sequence of observations {xt} that are recorded in a time ordered fashion are time series. 
-The objective of this time series analysis is to see how current gas price trends affect future 
-gas prices. Furthermore, this time series analysis will propose a statistical model that explains
-the relations of adjacent points in the gas prices that are correlated in time.
+A time series is a sequence of observations recorded in time order. The goal of this analysis is to examine how current gas price trends influence future prices and to develop a statistical model that captures the temporal dependence between observations.
 
 ![Alt text](images/gas1.png)
 Figure 1. 
 
 ##### Statistical Methods
 
-Upon inspecting the plot of the gasoline data there is a clear upward trend in the time series
-see figure 1. A simple linear regression could be used to estimate the trend. The linear trend
-is estimated by xt = -33899.69 +16.98zt + wt where xt is the average expected value of
-gasoline for a time in years zt. However, linear regression models do not explain all of the 
-important aspects of time series. The lagged relationships through autoregressive, and moving 
-average models are better suited for investigating time series. These models combine to form the
-autoregressive moving average (ARMA) models. The ARMA model regresses the present outcome xt on 
-the past outcomes (xt-l, ..., xt-p) with correlated errors. Times series analysis requires that 
-the mean and autocovariance satisfy the conditions of stationarity. 
+The plot of the gasoline data (Figure 1) shows a strong upward trend. Although a simple 
+linear regression, xₜ = −33899.69 + 16.98zₜ + wₜ,can estimate this trend, it does not
+capture the key time-dependent structure. Autoregressive and moving-average components, 
+combined in ARMA models, are better suited because they model relationships between current and 
+past values. The ARMA model regresses the present outcome xt on the past outcomes 
+(xt-l, ..., xt-p) with correlated errors.  
 
 The clear upward trend of the gas data shows that the series is not stationary see figure 1. 
 Differencing the data yields a stationary process such that the first difference eliminates a 
@@ -49,12 +38,10 @@ Figure 2.
 
 ##### Satisfying Stationarity 
 
-After taking the first difference of the New York gas data we plot the time series, ACF 
-and PACF to check if the conditions of stationarity are met. The ACF does not decay to zero very 
-quickly as h increases see figure 2. A slow decay in the ACF to zero indicates that differencing 
-is required. After taking the second difference the mean is around zero, and is constant. Also, 
-the variance is not drifting as much. As h increases the ACF decays to zero very quickly. Thus,
-the second difference has made the gas prices data stationary.
+After taking the first difference of gas data, the next step was to assess if the series is stationary.
+The ACF decayed slowly (Figure 2), indicating that additional differencing was needed. After 
+taking the second difference, the series had a stable mean near zero, relatively constant variance, 
+and an ACF that decayed quickly. Thus, the second difference has made the gas prices data stationary.
 
 ##### Estimating Model Parameters 
 
@@ -112,28 +99,14 @@ and was selected for forecasting weekly New York Harbor gas prices.
 
 ##### Forecast and Prediction Intervals
 
-The gas prices for the next ten weeks were forecasted using model2 see figure 7. The next
+The gas prices for the next ten weeks were forecasted using the seasonal arima model. The next
 10 weeks are the 26th week to the 35th week of 2010. The figure 7 includes a 95% and 90%
-prediction interval that is a range of plausible values for gas price in these 10 weeks. The
-95% prediction interval was calculated results in table 4. Due to the double differencing the
-forecasts follow the recent trend in the data. The large and quickly increasing prediction
-intervals show that the gas prices could increasing or decreasing at any time.
+prediction interval that is a range of plausible values for gas price in these 10 weeks. 
+Due to the double differencing the forecasts follow the recent trend in the data. The large and 
+quickly increasing prediction intervals show that the gas prices could increasing 
+or decreasing at any time.
 
 ![Alt text](images/gas12.png)
-![Alt text](images/gas8.png) 
-
-##### Spectral analysis
-
-A spectral analysis was performed on the gas data to identify the first three predominant
-periods. The first three predominant periods are 5.5385, 3.6923, and 2.7692. The confidence
-intervals for the dominant periods are given in table 5. From the confidence intervals, the
-first peak is not significant as the first periodogram ordinate that is 1300.628 lies in the
-confidence intervals of the second and third peak. Tthe second periodogram ordinate that
-is 1141.463 lies in the confidence intervals of the first and third peak the significance of
-the second peak cannot be established. Also, the third peak is not significant as the third
-periodogram ordinate is in the confidence intervals of the first and second peak.
-
-![Alt text](images/gas9.png) 
 
 #### Discussion
 

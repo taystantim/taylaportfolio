@@ -99,11 +99,12 @@ can make better predictions on population.
 
 Using the logistic model, conservative support probabilities were computed for every individual in the census data. The census data were then grouped by province, provincial cell totals were calculated, and each estimated probability was weighted by its province’s population. Provincial weighted means were obtained, then summed and divided by the national population to estimate the overall proportion of conservative voters.
 
-This produced an estimated conservative vote proportion of 0.347, assuming census data are representative of 2023 voters and that age and gender adequately predict conservative support. This value also represents the weighted probability of conservative votes based by
-province.
-
 ### Results 
 
+![Alt text](images/election5.png)
+
+This produced an estimated conservative vote proportion of 0.347, assuming census data are representative of 2023 voters and that age and gender adequately predict conservative support. This value also represents the weighted probability of conservative votes based by
+province.
 
 ### Bibliography
 
@@ -114,6 +115,8 @@ https://doi.org/10.7910/DVN/8RHLG1/1PBGR3, Harvard Dataverse, V1
 statistical programs. https://www23.statcan.gc.ca/imdb/p2SV.pl?Function=getSurvey&SDDS=450.
 3. Holtz, Y. (n.d.). ggplot2 Piechart. – the R Graph Gallery.https://www.r-graph-gallery.com/piechart-
 ggplot2.html.
+
+All analysis for this report was programmed using R version 4.0.2.
 
 
 ## Heart Disease Paper
@@ -242,3 +245,5 @@ formation Administration (EIA). https://www.eia.gov/about/. (Last Accessed: Apri
 Accessed: April 17, 2022)
 3. YCharts. (n.d.) US Retail Gas Price. https://ycharts.com/indicators/us_gas_price.
 (Last Accessed: April 17, 2022)
+
+All analysis for this report was programmed using R version 4.0.2.

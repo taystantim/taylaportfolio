@@ -119,8 +119,8 @@ prediction interval that is a range of plausible values for gas price in these 1
 forecasts follow the recent trend in the data. The large and quickly increasing prediction
 intervals show that the gas prices could increasing or decreasing at any time.
 
+![Alt text](images/gas12.png)
 ![Alt text](images/gas8.png) 
-![Alt text](images/gas9.png) 
 
 ##### Spectral analysis
 
@@ -133,7 +133,7 @@ is 1141.463 lies in the confidence intervals of the first and third peak the sig
 the second peak cannot be established. Also, the third peak is not significant as the third
 periodogram ordinate is in the confidence intervals of the first and second peak.
 
-![Alt text](images/gas12.png)
+![Alt text](images/gas9.png) 
 
 #### Discussion
 

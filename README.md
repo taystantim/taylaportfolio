@@ -85,13 +85,12 @@ Here, the forecast depends on the previous five observations.
 The seasonal ARIMA(0, 1, 1) × (0, 1, 1)_{52} also fails because its seasonal 
 MA(1) coefficient is −1, again violating invertibility.
 
-
-
-###### Model Diagnostics and the Significance of the Parameter Estimates
+![Alt text](images/gas4.png)
 
 Model adequacy was assessed using standardized residuals, q–q plots for normality, and 
 Ljung–Box tests for independence. These diagnostics were used to evaluate all proposed 
 and alternative models.
+
 
 ##### Model Selection
 

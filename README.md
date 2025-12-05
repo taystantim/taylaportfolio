@@ -2,7 +2,7 @@
 
 ## Video Project: Selecting the Best Predictor for the Median Housing Value of Calfornia Homes 
 
-[<img src="images/projtitle.jpg">](https://youtu.be/qNsJqWcyhRY)
+[<img src="images/calproj.png">](https://youtu.be/qNsJqWcyhRY)
 
 description
 

@@ -56,63 +56,50 @@ is required. After taking the second difference the mean is around zero, and is 
 the variance is not drifting as much. As h increases the ACF decays to zero very quickly. Thus,
 the second difference has made the gas prices data stationary.
 
-##### Estimating models 
+##### Estimating Model Parameters 
 
-The ARIMA model is a broader form of an ARMA model to include differencing. The data
-was differenced twice, so d = 2 for the ARIMA(p,d,q). To choose values for p and q we 
-inspect the ACF and the PACF of the doubly diffenced data. The ACF seems to cut off at lag 1 and 
-the PACF seems to tail off which suggests an ARIMA(0, 2, 1) process see figure 2. Also, upon 
-inspecting the PACF we might think that it cuts off at lag 5 and the ACF tails off which 
-would suggest an ARIMA(5, 2, 0)process.
-
-###### Decomposing the time series 
+Because the data required two differences, we set d = 2 in the ARIMA(p, d, q) model. Examining the ACF 
+and PACF of the twice-differenced series, the ACF cuts off at lag 1 and the PACF tails off, suggesting 
+an ARIMA(0, 2, 1). Alternatively, the PACF appears to cut off at lag 5 while the ACF tails off, 
+suggesting an ARIMA(5, 2, 0).
 
 ![Alt text](images/gas3.png)
-Figure 3. decomposed time series 
+Figure 3. Decomposed Time Series 
 
-From the decomposed time series plot there seems to be a yearly trend, thus a seasonal
-ARIMA model may be useful. The multiplicative seasonal ARIMA model contains the usual 
-ARMA process and a seasonal component. Upon inspecting the ACF at the seasons it is cut off 
-at lag 1s which implies that a season is 52 weeks or a year long. Looking at the PACF at the 
-seasons, it is tailing off at lags 1s, 2s, 3s, 4s... Thus, I propose a SMA(1) P = 0 , Q = 1. 
-Inspecting the lower lags of the ACF and PACF for the non-seasonal component, the ACF cuts off at
-lag 1 and the PACF tails off MA(1) within the seasons so p = 0, q = 1 for the dependence
-orders. Thus, I suggest the seasonal model ARIMA(0,1,1,)x(0,1,1)52 for the gas data.
+The decomposition indicates a yearly seasonal pattern, implying a seasonal ARIMA may be appropriate. 
+The ACF shows a seasonal cutoff at lag 1s (s = 52 weeks), while the PACF tails off at seasonal lags, 
+suggesting SMA(1) with P = 0, Q = 1. At non-seasonal lags, the ACF cuts off at 1 and the PACF tails 
+off, giving p = 0, q = 1. Thus, a reasonable seasonal model is ARIMA(0, 1, 1) × (0, 1, 1)_{52}.
 
 #### Results
 
 ##### Estimate of Parameters for the Proposed Models
 
-Applying the ARIMA(0, 2, 1) process, the parameter estimate for theta1 is -1. The 
-magnitude of theta is equal to 1 so the older observations have the same influence as the more 
-recent observations. This violates invertiblity so this model is not useful. The second proposed
-model ARIMA(5,2,0) is an AR(5) process of the form xt = -0.7955xt-1 -0.6043xt-2 -0.3416xt-
-3 -0.1995xt-4 -0.1047xt-5 + wt. In this model, xt is forecasted using a linear combination of
-past five values of the variable. The third proposed model is the ARIMA(0,1,1)x(0,1,1)52.
-The seasonal coefficient is -1.0 for a SMA(1) process, so this model is not meaningful in the
-same way that the first model fails in being invertible. In these models xt is second difference
-of the estimation for next week’s average gas price in the New York Harbor based on the
-previous weekly gas prices.
+For ARIMA(0, 2, 1), the estimate θ₁ = −1 violates invertibility, making the model unsuitable.
+The ARIMA(5, 2, 0) model yields:
+
+xₜ = −0.7955xₜ₋₁ − 0.6043xₜ₋₂ − 0.3416xₜ₋₃ − 0.1995xₜ₋₄ − 0.1047xₜ₋₅ + wₜ
+
+Here, the forecast depends on the previous five observations. The seasonal 
+ARIMA(0, 1, 1) × (0, 1, 1)_{52} also fails because its seasonal MA(1) coefficient 
+is −1, again violating invertibility.
 
 ###### Model Diagnostics and the Significance of the Parameter Estimates
 
-To evaluate the model fits on the data we consider the standardized residuals. The assump-
-tion is that the standardized residuals are identically and independently distributed with 0
-mean and variance one. We want normality of the residuals which we can check with q-qplot.
-The Ljung-Box p-values are useful for testing the independence of the residuals. Where the
-null hypothesis is that the residuals are independent thus, obtaining large p-values suggests
-that the residuals are independent. I tested all the models and then other models by 
+Model adequacy was assessed using standardized residuals, q–q plots for normality, and 
+Ljung–Box tests for independence. These diagnostics were used to evaluate all proposed 
+and alternative models.
 
 ##### Model Selection
 
-There were two models that satisfied all of the assumptions of an ARIMA model. These
-models are ARIMA(1, 1, 1)x(1, 1, 2)52 and ARIMA( 2, 1, 2)x(0, 1, 1)52. To select between
-these two models we will consider their AIC, AICc, and BIC. These measurements compare
-their models predictive error while penalizing model with more parameters. Model 2 that is
-ARIMA( 2, 1, 2)x(0, 1, 1)52 minimizes AIC, AICc and BIC so we will choose this model to
-predict the gas prices.
+Two models satisfied ARIMA assumptions:
+- ARIMA(1, 1, 1) × (1, 1, 2)_{52}
+- ARIMA(2, 1, 2) × (0, 1, 1)_{52}
+Using AIC, AICc, and BIC for comparison, ARIMA(2, 1, 2) × (0, 1, 1)_{52} performed best
+and was selected for forecasting weekly New York Harbor gas prices.
 
 ##### Forecast and Prediction Intervals
+
 The gas prices for the next ten weeks were forecasted using model2 see figure 7. The next
 10 weeks are the 26th week to the 35th week of 2010. The figure 7 includes a 95% and 90%
 prediction interval that is a range of plausible values for gas price in these 10 weeks. The

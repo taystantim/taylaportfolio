@@ -75,14 +75,17 @@ off, giving p = 0, q = 1. Thus, a reasonable seasonal model is ARIMA(0, 1, 1) ×
 
 ##### Estimate of Parameters for the Proposed Models
 
-For ARIMA(0, 2, 1), the estimate θ₁ = −1 violates invertibility, making the model unsuitable.
+For ARIMA(0, 2, 1), the estimate θ₁ = −1 violates invertibility, making the 
+model unsuitable.
+
 The ARIMA(5, 2, 0) model yields:
-
 xₜ = −0.7955xₜ₋₁ − 0.6043xₜ₋₂ − 0.3416xₜ₋₃ − 0.1995xₜ₋₄ − 0.1047xₜ₋₅ + wₜ
+Here, the forecast depends on the previous five observations. 
 
-Here, the forecast depends on the previous five observations. The seasonal 
-ARIMA(0, 1, 1) × (0, 1, 1)_{52} also fails because its seasonal MA(1) coefficient 
-is −1, again violating invertibility.
+The seasonal ARIMA(0, 1, 1) × (0, 1, 1)_{52} also fails because its seasonal 
+MA(1) coefficient is −1, again violating invertibility.
+
+
 
 ###### Model Diagnostics and the Significance of the Parameter Estimates
 

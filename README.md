@@ -12,7 +12,7 @@ description
 
 ## Gas Prices
 
-#### Introduction
+### Introduction
 
 Gasoline makes up nearly half of U.S. oil consumption and is the largest refined product sold domestically (TradingEconomics). The U.S. Energy Information Administration (EIA) reports weekly, monthly, and annual gas prices using an unweighted average of daily prices. This study analyzes the weekly New York Harbor conventional regular gasoline dataset (in cents per gallon), covering 2000 to mid-2010 with 575 observations.
 
@@ -21,7 +21,7 @@ A time series is a sequence of observations recorded in time order. The goal of 
 ![Alt text](images/gas1.png)
 Figure 1. 
 
-##### Statistical Methods
+### Statistical Methods
 
 The plot of the gasoline data (Figure 1) shows a strong upward trend. Although a simple 
 linear regression, xₜ = −33899.69 + 16.98zₜ + wₜ,can estimate this trend, it does not
@@ -37,14 +37,14 @@ linear trend, the second difference eliminates a quadratic trend, and so on.
 ![Alt text](images/gas2.png)
 Figure 2. 
 
-##### Satisfying Stationarity 
+#### Satisfying Stationarity 
 
 After taking the first difference of gas data, the next step was to assess if the series is stationary.
 The ACF decayed slowly (Figure 2), indicating that additional differencing was needed. After 
 taking the second difference, the series had a stable mean near zero, relatively constant variance, 
 and an ACF that decayed quickly. Thus, the second difference has made the gas prices data stationary.
 
-##### Estimating Model Parameters 
+#### Estimating Model Parameters 
 
 Because the data required two differences, we set d = 2 in the ARIMA(p, d, q) model. Examining the ACF 
 and PACF of the twice-differenced series, the ACF cuts off at lag 1 and the PACF tails off, suggesting 
@@ -59,9 +59,9 @@ The ACF shows a seasonal cutoff at lag 1s (s = 52 weeks), while the PACF tails o
 suggesting SMA(1) with P = 0, Q = 1. At non-seasonal lags, the ACF cuts off at 1 and the PACF tails 
 off, giving p = 0, q = 1. Thus, a reasonable seasonal model is ARIMA(0, 1, 1) × (0, 1, 1)_{52}.
 
-#### Results
+### Results
 
-##### Model Selection
+#### Model Selection
 
 For ARIMA(0, 2, 1), the estimate θ₁ = −1 violates invertibility, making the 
 model unsuitable.
@@ -98,7 +98,7 @@ and was selected for forecasting weekly New York Harbor gas prices.
 
 ![Alt text](images/gas10.png)
 
-##### Forecast and Prediction Intervals
+#### Forecast and Prediction Intervals
 
 The gas prices for the next ten weeks were forecasted using the seasonal ARIMA model. The next
 10 weeks are the 26th week to the 35th week of 2010. The figure 7 includes a 95% and 90%
@@ -108,7 +108,7 @@ decreasing at any time.
 
 ![Alt text](images/gas12.png)
 
-#### Discussion
+### Discussion
 
 The New York Harbor conventional regular gasoline weekly spot price can be modeled a seasonal ARIMA:
 ARIMA(2, 1, 2) × (0, 1, 1)_{52}. Seasonal persistence occurs as the yearly gas prices are nearly
@@ -118,7 +118,7 @@ geographic factors that shape price dynamics. Long-term forecasts are also unrel
 structural changes (e.g., recessions, geopolitical events) could drastically alter price behavior.
 Periodic model updates with recent data are therefore necessary for maintaining predictive accuracy.
 
-#### Bibliography
+### Bibliography
 
 1. EIA. (n.d.) Energy Information Administration - EIA - independent statistics and
 analysis. About EIA - U.S. Energy Information Administration (EIA) .U.S.EnergyIn-

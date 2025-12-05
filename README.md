@@ -4,20 +4,17 @@
 
 [<img src="images/calproj.png">](https://youtu.be/qNsJqWcyhRY)
 
-description
+
 
 ## University Paper: Predicting the Porportion of Votes of the Most Popular Canadian Party for the Federal Election
 
 ### Introduction 
 
-The objective of this report is to predict the overall popular vote of the next Canadian federal 
-election with the use of a logistic regression model and a post-stratification technique. 
-The target population of this study is the Canadian citizens that will vote in the 2023 election.
-Furthermore, the survey data used in the study was obtained from the 2019 Canadian Election Study 
-dataset that is available through their website. Moreover, General Social Survey data from 2017 
-will be used as census data to model some population demographics. The post-stratification technique 
-will be used to estimate the most popular Canadian party by partitioning the population into demographic 
-cells, calculating a value for each cell and then combining the values with a weighted average.
+The objective of this report is to predict the overall popular vote in the next Canadian federal election.
+The target population for this study is all Canadian citizens who will vote in the 2023 election.
+
+Survey data were obtained from the 2019 Canadian Election Study, publicly available on the CES website, while population 
+demographics were drawn from the 2017 General Social Survey. Post-stratification is then applied by dividing the population into demographic cells, estimating the probability of supporting each party within each cell, and combining these estimates using weighted averages. This method allows us to approximate the most popular Canadian political party at the population level.
 
 ### Data 
 
@@ -118,6 +115,7 @@ All analysis for this report was programmed using R version 4.0.2.
 
 
 ## Heart Disease Paper
+
 
 ## University Paper: Forecasting New York Harbor Gas Prices
 

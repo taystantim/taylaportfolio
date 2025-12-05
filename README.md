@@ -48,7 +48,7 @@ For the CES census data, ages were rounded to whole numbers, individuals under 1
 “sex” was renamed to “gender.” Provincial names were recoded numerically to align with the survey data, 
 and all columns except gender, age, and province were dropped.
 
-##### Variables Description 
+#### Variables Description 
 
 The variables that are included in the study are age, gender, province, support_cons, cons_proportion. 
 The ages range from 18 to 100 as 18 is the minimum age to vote in Canada. The gender variable can only 
@@ -59,12 +59,62 @@ indicator variable that takes on a value of 1 or 0, 1 is taken if the individual
 party and 0 if they do not. Further, the cons_proportion variable gives the proportion of conservative voters 
 in the data or the sum of conservative voters over the entire population. 
 
-##### Distribution of the data 
+#### Distribution of the data 
 
 ![Alt text](images/election1.png)
+The plot depicts the frequencies of people in the census data by province. Ontario and Quebec
+will have the greatest influence on the proportion of conservative votes. 
+
 ![Alt text](images/election2.png)
+The plot depicts the relationship between gender and conservative political beliefs. The bar graph shows
+the frequency of males and females the survey data set. 
+
 ![Alt text](images/election3.png)
+The pie graph that illustrates the proportion of people who voted conservative
+by the total number of conservative votes by age group. The age group 85-100 has the smallest number
+of conservative and this is likely because this age group made up the smallest proportion of people in the
+survey (there are only 35 people in this age group). 
+
 ![Alt text](images/election4.png)
+The plot is another pie graph that showcases the conservative support by province. Provinces with
+more people have a larger weight in the pie.
+
+### Methods
+
+the model will predict whether or not someone will vote conservative based on demographics from the census 
+data. A Logistic regression model is a statistical model that can model a binary response variable 
+using a log function. the data showed trends with age and gender political beliefs, so they were chosen 
+as predictor variables. Age is a numerical predictor and gender is a categorical predictor coded using as.factor. 
+ The finite population correction was implemented to fix the standard error estimates so
+they reflect the target population better. The logistic model was created using the svyglm function with
+the binomial family to ensure the response is binary. The outcome of the logistic regression model gives the
+log likelihood of an individual to vote conservative based off their age and gender. This likelihood can be
+rearranged as the probability of that individual to vote conservative.
+
+y = -1.4739 + 0.0107x(age) + 0.5272I(male) + e
+
+The poststratification process creates a weighted average based off of the proportions of the demographic 
+in the population. the post enables that each group in the demographic is properly represented in the sample so 
+can make better predictions on population.
+
+Using the logistic model, conservative support probabilities were computed for every individual in the census data. The census data were then grouped by province, provincial cell totals were calculated, and each estimated probability was weighted by its province’s population. Provincial weighted means were obtained, then summed and divided by the national population to estimate the overall proportion of conservative voters.
+
+This produced an estimated conservative vote proportion of 0.347, assuming census data are representative of 2023 voters and that age and gender adequately predict conservative support. This value also represents the weighted probability of conservative votes based by
+province.
+
+### Results 
+
+
+### Bibliography
+
+1. Stephenson, Laura B; Harell, Allison; Rubenson, Daniel; Loewen, Peter John. (2020) 2019 Canadian
+Election Study - Phone Survey Technical Report.pdf, 2019 Canadian Election Study - Phone Survey,
+https://doi.org/10.7910/DVN/8RHLG1/1PBGR3, Harvard Dataverse, V1
+2. Government of Canada, S. C. (2019, February 6). General Social Survey - Family (GSS). Surveys and
+statistical programs. https://www23.statcan.gc.ca/imdb/p2SV.pl?Function=getSurvey&SDDS=450.
+3. Holtz, Y. (n.d.). ggplot2 Piechart. – the R Graph Gallery.https://www.r-graph-gallery.com/piechart-
+ggplot2.html.
+
 
 ## Heart Disease Paper
 

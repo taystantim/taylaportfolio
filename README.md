@@ -59,8 +59,12 @@ indicator variable that takes on a value of 1 or 0, 1 is taken if the individual
 party and 0 if they do not. Further, the cons_proportion variable gives the proportion of conservative voters 
 in the data or the sum of conservative voters over the entire population. 
 
-##### Plots of Distribution of the data 
+##### Distribution of the data 
 
+![Alt text](images/election1.png)
+![Alt text](images/election2.png)
+![Alt text](images/election3.png)
+![Alt text](images/election4.png)
 
 ## Heart Disease Paper
 

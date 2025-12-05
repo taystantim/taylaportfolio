@@ -92,13 +92,14 @@ time and then checking if they satisfied the model assumptions. In both of the s
 models ARIMA(1, 1, 1)x(1, 1, 2)52 and ARIMA( 2, 1, 2)x(0, 1, 1)52, all of the coefficients 
 or were significant. 
 
-![Alt text](images/)  coefficients table 
+![Alt text](images/gas5.png) 
 
 Model adequacy was assessed using standardized residuals, q–q plots for normality, and 
 Ljung–Box tests for independence. These diagnostics were used to evaluate all proposed 
 and alternative models.
 
-![Alt text](images/) model diagnositics 
+![Alt text](images/gas6.png) 
+![Alt text](images/gas7.png)
 
 Two models satisfied ARIMA assumptions:
 - ARIMA(1, 1, 1) × (1, 1, 2)_{52}

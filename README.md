@@ -6,7 +6,7 @@
 
 
 
-## University Paper: Predicting the Porportion of Votes of the Most Popular Canadian Party for the Federal Election
+## University Paper: Predicting the Porportion of Conservative Votes for the Next Federal Election
 
 ### Introduction 
 

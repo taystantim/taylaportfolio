@@ -1,4 +1,4 @@
-# Tayla's University Projects 
+# Tayla's Projects 
 
 ## Video Project: Selecting the Best Predictor for the Median Housing Value of Calfornia Homes 
 
@@ -6,7 +6,7 @@
 
 description
 
-## Predicting the Porportion of Votes of the Most Popular Canadian Party for the Federal Election
+## University Paper: Predicting the Porportion of Votes of the Most Popular Canadian Party for the Federal Election
 
 ### Introduction 
 
@@ -119,7 +119,7 @@ All analysis for this report was programmed using R version 4.0.2.
 
 ## Heart Disease Paper
 
-## Forecasting New York Harbor Gas Prices
+## University Paper: Forecasting New York Harbor Gas Prices
 
 ### Introduction
 
@@ -187,6 +187,7 @@ The seasonal ARIMA(0, 1, 1) × (0, 1, 1)_{52} also fails because its seasonal
 MA(1) coefficient is −1, again violating invertibility.
 
 ![Alt text](images/gas4.jpg)
+<img src="images/gas4.jpg" height="300">
 
 Other seasonal ARIMA models were tested on the gas data by altering one dependence at a 
 time and then checking if they satisfied the model assumptions. In both of the seasonal 

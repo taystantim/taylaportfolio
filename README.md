@@ -81,21 +81,19 @@ more people have a larger weight in the pie.
 
 ### Methods
 
-the model will predict whether or not someone will vote conservative based on demographics from the census 
+The model will predict whether or not someone will vote conservative based on demographics from the census 
 data. A Logistic regression model is a statistical model that can model a binary response variable 
-using a log function. the data showed trends with age and gender political beliefs, so they were chosen 
-as predictor variables. Age is a numerical predictor and gender is a categorical predictor coded using as.factor. 
- The finite population correction was implemented to fix the standard error estimates so
-they reflect the target population better. The logistic model was created using the svyglm function with
-the binomial family to ensure the response is binary. The outcome of the logistic regression model gives the
-log likelihood of an individual to vote conservative based off their age and gender. This likelihood can be
-rearranged as the probability of that individual to vote conservative.
+using a log function. Age and gender were as predictor variables for the model due the trends with political 
+beliefs. Age is a numerical predictor and gender is a categorical predictor. A finite population correction 
+was implemented to fix the standard error estimates so they reflect the target population better. The outcome 
+of the logistic regression model is the log likelihood of an individual to vote conservative based off 
+their age and gender. This likelihood can be rearranged as the probability of that individual to vote conservative.
 
 y = -1.4739 + 0.0107x(age) + 0.5272I(male) + e
 
 The poststratification process creates a weighted average based off of the proportions of the demographic 
-in the population. the post enables that each group in the demographic is properly represented in the sample so 
-can make better predictions on population.
+in the population. Post-stratification ensures that each demographic group is properly represented in the 
+sample, allowing for more accurate population level predictions.
 
 Using the logistic model, conservative support probabilities were computed for every individual in the census data. The census data were then grouped by province, provincial cell totals were calculated, and each estimated probability was weighted by its province’s population. Provincial weighted means were obtained, then summed and divided by the national population to estimate the overall proportion of conservative voters.
 

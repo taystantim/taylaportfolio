@@ -6,11 +6,11 @@
 
 description
 
-## Result of Canadian Federal Election
+## Predicting the Porportion of Votes of the Most Popular Canadian Party for the Federal Election
 
 ## Heart Disease Paper
 
-## Gas Prices
+## Forecasting New York Harbor Gas Prices
 
 ### Introduction
 

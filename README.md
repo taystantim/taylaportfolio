@@ -108,7 +108,7 @@ Two models satisfied ARIMA assumptions:
 Using AIC, AICc, and BIC for comparison, ARIMA(2, 1, 2) × (0, 1, 1)_{52} performed best
 and was selected for forecasting weekly New York Harbor gas prices.
 
-![Alt text](images/) aic bic comparisions 
+![Alt text](images/gas10.png)
 
 ##### Forecast and Prediction Intervals
 
@@ -118,6 +118,9 @@ prediction interval that is a range of plausible values for gas price in these 1
 95% prediction interval was calculated results in table 4. Due to the double differencing the
 forecasts follow the recent trend in the data. The large and quickly increasing prediction
 intervals show that the gas prices could increasing or decreasing at any time.
+
+![Alt text](images/gas8.png) 
+![Alt text](images/gas9.png) 
 
 ##### Spectral analysis
 
@@ -129,6 +132,8 @@ confidence intervals of the second and third peak. Tthe second periodogram ordin
 is 1141.463 lies in the confidence intervals of the first and third peak the significance of
 the second peak cannot be established. Also, the third peak is not significant as the third
 periodogram ordinate is in the confidence intervals of the first and second peak.
+
+![Alt text](images/gas12.png)
 
 #### Discussion
 

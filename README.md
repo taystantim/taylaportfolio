@@ -47,7 +47,7 @@ linear trend, the second difference eliminates a quadratic trend, and so on.
 ![Alt text](images/gas2.png)
 Figure 2. 
 
-##### Satifying stationarity 
+##### Satisfying Stationarity 
 
 After taking the first difference of the New York gas data we plot the time series, ACF 
 and PACF to check if the conditions of stationarity are met. The ACF does not decay to zero very 

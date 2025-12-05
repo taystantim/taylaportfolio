@@ -8,13 +8,71 @@ description
 
 ## Predicting the Porportion of Votes of the Most Popular Canadian Party for the Federal Election
 
+### Introduction 
+
+The objective of this report is to predict the overall popular vote of the next Canadian federal 
+election with the use of a logistic regression model and a post-stratification technique. 
+The target population of this study is the Canadian citizens that will vote in the 2023 election.
+Furthermore, the survey data used in the study was obtained from the 2019 Canadian Election Study 
+dataset that is available through their website. Moreover, General Social Survey data from 2017 
+will be used as census data to model some population demographics. The post-stratification technique 
+will be used to estimate the most popular Canadian party by partitioning the population into demographic 
+cells, calculating a value for each cell and then combining the values with a weighted average.
+
+### Data 
+
+The Canadian Election Study (CES) surveys demographic factors and political preferences relevant to 
+Canadian voters. The data, publicly available on the CES website, is collected through phone and web 
+surveys; this study uses only the phone survey data. The CES gathered responses before and after the 
+2019 federal election, though only the pre-election phase is analyzed here. During the election period, 
+interviewers completed 4,021 surveys using a modified random-digit dialing method. 
+
+The General Social Survey (GSS) aims to measure long-term social trends and supply data for social and
+political analysis. It targets non-institutionalized Canadians aged 14 and older across all provinces, 
+reaching both cell phone and landline users. A stratified probability sample by province was used, 
+ensuring minimum sample sizes to capture provincial variability. Approximately 34,000 Canadians were 
+contacted, and about 20,000 completed the survey.
+
+#### Data Cleaning 
+
+To clean the GSS survey data, responses to Question 11 (“Which party do you think you will likely vote for?”) 
+were first filtered so that only those selecting a valid party option (1–6) were kept. The dataset was 
+then restricted to respondents who identified as male or female, since these were the only gender categories 
+represented in the census data, and because gender will be used as a predictor in the regression model. 
+Observations from the Northwest Territories and Yukon were removed because these territories were not 
+included in the census dataset. Gender categories were recoded as “Male”/“Female” to match the census format.
+An age variable was created by subtracting birth year from 2019, and a variable to indicate conservative 
+support was created.
+
+For the CES census data, ages were rounded to whole numbers, individuals under 18 were removed, and the variable 
+“sex” was renamed to “gender.” Provincial names were recoded numerically to align with the survey data, 
+and all columns except gender, age, and province were dropped.
+
+##### Variables Description 
+
+The variables that are included in the study are age, gender, province, support_cons, cons_proportion. 
+The ages range from 18 to 100 as 18 is the minimum age to vote in Canada. The gender variable can only 
+take on “Male” or “Female” due to the constraints in the census data. The province variable takes on values 
+1 to 10 that represent Newfoundland and Labrador, Prince Edward Island, Nova Scotia, New Brunswick, Quebec, O
+ntario, Manitoba, Saskatchewan, Alberta and British Columbia respectively. The variable support_cons is an 
+indicator variable that takes on a value of 1 or 0, 1 is taken if the individual supports the conservative 
+party and 0 if they do not. Further, the cons_proportion variable gives the proportion of conservative voters 
+in the data or the sum of conservative voters over the entire population. 
+
+##### Plots of Distribution of the data 
+
+
 ## Heart Disease Paper
 
 ## Forecasting New York Harbor Gas Prices
 
 ### Introduction
 
-Gasoline makes up nearly half of U.S. oil consumption and is the largest refined product sold domestically (TradingEconomics). The U.S. Energy Information Administration (EIA) reports weekly, monthly, and annual gas prices using an unweighted average of daily prices. This study analyzes the weekly New York Harbor conventional regular gasoline dataset (in cents per gallon), covering 2000 to mid-2010 with 575 observations.
+Gasoline makes up nearly half of U.S. oil consumption and is the largest refined product sold 
+domestically (TradingEconomics). The U.S. Energy Information Administration (EIA) reports 
+weekly, monthly, and annual gas prices using an unweighted average of daily prices. This study 
+analyzes the weekly New York Harbor conventional regular gasoline dataset (in cents per gallon), 
+covering 2000 to mid-2010 with 575 observations.
 
 A time series is a sequence of observations recorded in time order. The goal of this analysis is to examine how current gas price trends influence future prices and to develop a statistical model that captures the temporal dependence between observations.
 

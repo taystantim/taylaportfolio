@@ -1,6 +1,6 @@
 # Tayla's University Projects 
 
-## Video Project: Selecting the Best Predictor for Prices of Calfornia Homes 
+## Video Project: Selecting the Best Predictor for the Median Housing Value of Calfornia Homes 
 
 [<img src="images/projtitle.jpg">](https://youtu.be/qNsJqWcyhRY)
 

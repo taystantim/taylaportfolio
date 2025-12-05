@@ -73,7 +73,7 @@ off, giving p = 0, q = 1. Thus, a reasonable seasonal model is ARIMA(0, 1, 1) ×
 
 #### Results
 
-##### Estimate of Parameters for the Proposed Models
+##### Model Selection
 
 For ARIMA(0, 2, 1), the estimate θ₁ = −1 violates invertibility, making the 
 model unsuitable.
@@ -85,20 +85,29 @@ Here, the forecast depends on the previous five observations.
 The seasonal ARIMA(0, 1, 1) × (0, 1, 1)_{52} also fails because its seasonal 
 MA(1) coefficient is −1, again violating invertibility.
 
-![Alt text](images/gas4.png)
+![Alt text](images/gas4.jpg)
+
+Other seasonal ARIMA models were tested on the gas data by altering one dependence at a 
+time and then checking if they satisfied the model assumptions. In both of the seasonal 
+models ARIMA(1, 1, 1)x(1, 1, 2)52 and ARIMA( 2, 1, 2)x(0, 1, 1)52, all of the coefficients 
+or were significant. 
+
+![Alt text](images/)  coefficients table 
 
 Model adequacy was assessed using standardized residuals, q–q plots for normality, and 
 Ljung–Box tests for independence. These diagnostics were used to evaluate all proposed 
 and alternative models.
 
-
-##### Model Selection
+![Alt text](images/) model diagnositics 
 
 Two models satisfied ARIMA assumptions:
 - ARIMA(1, 1, 1) × (1, 1, 2)_{52}
 - ARIMA(2, 1, 2) × (0, 1, 1)_{52}
+
 Using AIC, AICc, and BIC for comparison, ARIMA(2, 1, 2) × (0, 1, 1)_{52} performed best
 and was selected for forecasting weekly New York Harbor gas prices.
+
+![Alt text](images/) aic bic comparisions 
 
 ##### Forecast and Prediction Intervals
 

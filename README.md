@@ -120,20 +120,13 @@ periodogram ordinate is in the confidence intervals of the first and second peak
 
 #### Discussion
 
-The New York Harbor conventional regular gasoline weekly spot price may be estimated by
-a statistical seasonal ARIMA model. This model has the orders of dependence p = 2, d = 1,
-q = 2 , P = 0 , D = 1, Q = 1. Seasonal persistence occurs as the yearly gas prices are nearly
-periodic in the weeks of the year. The seasonal ARIMA model may be used to forecast gas
-prices in New York. A limitation of the study is that the model is specific to the data from
-the gas dataset which contains the average gas prices in the New York Harbor. Thus, this
-model is only applicable for forecasting average gas prices in the New York Harbor. Other
-regions have various economical and geographical differences which alter the trends in their
-gas prices. Therefore, different regions would require different models that are built from
-the gas prices in their region. Furthermore, it is unlikely that this seasonal ARIMA model
-would be able to accurately capture trends in the next 100 years or so as there are a variety
-of factors that can completely alter the trajectory of gas prices such as depression or war.
-Hence this model would need to be updated every so often to incorporate recent data for
-better prediction.
+The New York Harbor conventional regular gasoline weekly spot price can be modeled a seasonal ARIMA:
+ARIMA(2, 1, 2) × (0, 1, 1)_{52}. Seasonal persistence occurs as the yearly gas prices are nearly
+periodic in the weeks of the year. This model is suitable for forecasting gas prices in this
+specific region, but its applicability is limited: other regions have different economic and 
+geographic factors that shape price dynamics. Long-term forecasts are also unreliable, as future 
+structural changes (e.g., recessions, geopolitical events) could drastically alter price behavior.
+Periodic model updates with recent data are therefore necessary for maintaining predictive accuracy.
 
 #### Bibliography
 

@@ -113,29 +113,6 @@ ggplot2.html.
 
 All analysis for this report was programmed using R version 4.0.2.
 
-
-## Heart Disease Paper
-
-### Introduction
-
-The California Health Interview Survey reports behaviors related to health, health
-status, health insurance coverage, access to health care services, health conditions, and other health issues
-(S. Sherr et al., 2020). The CHIS data are published for public use on the UCLA center for health policy
-research website.
-
-The recent legalization of marijuana has resulted in increasing rates of marijuana consumption. Marijuana is the third most frequently used addictive drug after alcohol and tobacco(NIDA,2019). the industry of marijuana is expanding as it is currently sold in retail stores, coffee shops, breweries, wineries,
-dispensaries, overtheinternet, andevengrownathome(SAMHSA,2020). teenagersandyoungadultsdonot
-see using it as a dangerous behaviour (SAMHSA, 2020). 
-
-Permanent loss of IQ, anxiety or paranoia, decreased athletic performance, trouble with driving, chronic pain
-and cancer are some of the known risks of marijuana use (CDC, 2018). Also, when marijuana is smoked,
-it can damage your lungs and cardiovascular system which can further damage the brain and body (CDC,
-2018). In addition, marijuana is known to increase one’s heart rate for up to 3 hours after consumption
-which may in turn, increase the likelihood of a heart attack (NIDA, 2019). The objective of this study is
-to see whether or not marijuana use is associated with an increased likelihood of having heart disease. The
-hypothesis is that those who use marijuana are more likely to have heart disease.
-
-
 ## University Paper: Forecasting New York Harbor Gas Prices
 
 ### Introduction

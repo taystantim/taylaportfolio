@@ -1,9 +1,52 @@
 # Tayla's Projects 
 
+## Retail Trial Analysis – Chip Category (Excel)
+
+### Project Summary
+
+In this project, I analysed supermarket transaction and customer data to understand chip purchasing behaviour and evaluate the impact of a store-level trial. The goal was to identify which customer groups drive chip sales and determine whether the trial led to a real improvement in performance. The analysis was completed entirely in Microsoft Excel, demonstrating my ability to clean data, perform analysis, and communicate insights clearly without relying on advanced programming tools.
+
+### What I Did
+
+- Cleaned and prepared transaction and customer datasets
+- Merged datasets using Excel formulas and lookups
+- Analysed chip sales by customer life stage and affluence
+- Built pivot tables to summarise sales, volume, and purchasing behaviour
+- Selected appropriate control stores by comparing historical sales patterns
+- Compared trial stores against scaled control stores
+- Calculated percentage differences and confidence intervals to assess trial impact
+- Created charts and a client-ready presentation to communicate findings
+
+### Key Findings
+
+- Mainstream and Budget families accounted for the largest share of chip sales
+- Budget customers purchased chips more frequently but at lower price points
+- Premium customers contributed a smaller proportion of total sales
+- The trial resulted in a statistically significant uplift in some stores, suggesting a genuine performance improvement rather than random variation
+
+### Recommendations
+
+- Roll out the trial selectively to stores with similar customer profiles
+- Focus expansion on stores most comparable to the strongest-performing trial store
+- Use further trials to test pricing or promotional strategies
+- Continue monitoring performance to ensure consistent execution
+
+### Tools & Skills Demonstrated
+
+- Microsoft Excel (pivot tables, formulas, charts)
+- Data cleaning and validation
+- Customer segmentation analysis
+- Trial evaluation and basic statistical analysis
+- Data visualisation and storytelling
+  
+### Why This Project Matters
+
+This project demonstrates my ability to take raw data, turn it into meaningful insights, and communicate results in a way that supports business decision-making.
+
+
 ## Video Project: Selecting the Best Predictor for the Median Housing Value of Calfornia Homes 
 
 [<img src="images/calproj.png">](https://youtu.be/qNsJqWcyhRY)
-
 
 
 ## University Paper: Predicting the Porportion of Conservative Votes for the Next Federal Election

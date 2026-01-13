@@ -100,18 +100,10 @@ will have the greatest influence on the proportion of conservative votes.
 The plot depicts the relationship between gender and conservative political beliefs. The bar graph shows
 the frequency of males and females the survey data set. 
 
-![Alt text](images/election3.png)
-The pie graph that illustrates the proportion of people who voted conservative
-by the total number of conservative votes by age group. The age group 85-100 has the smallest number
-of conservative and this is likely because this age group made up the smallest proportion of people in the
-survey (there are only 35 people in this age group). 
-
 ![Alt text](images/election4.png)
 The plot is another pie graph that showcases the conservative support by province. Provinces with
 more people have a larger weight in the pie.
 
-
-![Alt text](images/election5.png)
 
 ## Forecasting New York Harbor Gas Prices
 
@@ -157,29 +149,6 @@ This model effectively captured both short-term price dynamics and annual season
 
 ### Why This Project Matters
 This project demonstrates my ability to work with real-world time-series data, select appropriate statistical models, and communicate uncertainty
-
-![Alt text](images/gas1.png)
-Figure 1. 
-
-![Alt text](images/gas2.png)
-Figure 2. 
-
-
-![Alt text](images/gas3.png)
-
-
-<img src="images/gas4.jpg" height="300">
-
-<img src="images/gas5.png" height="300">
-
-
-![Alt text](images/gas6.png) 
-![Alt text](images/gas7.png)
-
-
-<img src="images/gas10.png" height="100">
-
-
 
 ![Alt text](images/gas12.png)
 

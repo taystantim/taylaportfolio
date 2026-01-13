@@ -1,6 +1,6 @@
 # Tayla's Projects 
 
-## Retail Trial Analysis – Chip Category (Excel)
+## Retail Trial Analysis – Chip Category
 
 ### Project Summary
 

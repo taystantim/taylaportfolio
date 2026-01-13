@@ -48,56 +48,47 @@ This project demonstrates my ability to take raw data, turn it into meaningful i
 
 [<img src="images/calproj.png">](https://youtu.be/qNsJqWcyhRY)
 
+## Predicting Conservative Vote Share – Canadian Federal Election
 
-## University Paper: Predicting the Porportion of Conservative Votes for the Next Federal Election
+### Project Overview
 
-### Introduction 
+This project used Canadian election and census data to estimate the proportion of voters expected to support the Conservative Party in the next federal election. The goal was to apply statistical modelling and demographic weighting to produce a population-level prediction.
 
-The objective of this report is to predict the overall popular vote in the next Canadian federal election.
-The target population for this study is all Canadian citizens who will vote in the 2023 election.
+### Data Used
 
-Survey data were obtained from the 2019 Canadian Election Study, publicly available on the CES website, while population 
-demographics were drawn from the 2017 General Social Survey. Post-stratification is then applied by dividing the population into demographic cells, estimating the probability of supporting each party within each cell, and combining these estimates using weighted averages. This method allows us to approximate the most popular Canadian political party at the population level.
+2019 Canadian Election Study (CES) – voter demographics and party preference
+2017 General Social Survey (GSS) – population demographics for weighting
 
-### Data 
+### What I Did
 
-The Canadian Election Study (CES) surveys demographic factors and political preferences relevant to 
-Canadian voters. The data, publicly available on the CES website, is collected through phone and web 
-surveys; this study uses only the phone survey data. The CES gathered responses before and after the 
-2019 federal election, though only the pre-election phase is analyzed here. During the election period, 
-interviewers completed 4,021 surveys using a modified random-digit dialing method. 
+- Cleaned and prepared large survey and census datasets
+- Filtered and recoded demographic variables for consistency
+- Engineered key variables including age, gender, and conservative support
+- Built a logistic regression model to predict likelihood of voting Conservative
+- Applied post-stratification weighting by province to scale predictions to the national population
+- Visualised demographic and regional patterns in voting behaviour
 
-The General Social Survey (GSS) aims to measure long-term social trends and supply data for social and
-political analysis. It targets non-institutionalized Canadians aged 14 and older across all provinces, 
-reaching both cell phone and landline users. A stratified probability sample by province was used, 
-ensuring minimum sample sizes to capture provincial variability. Approximately 34,000 Canadians were 
-contacted, and about 20,000 completed the survey.
+### Methodology
 
-#### Data Cleaning 
+- Modelled Conservative support as a binary outcome using logistic regression
+- Used age and gender as predictors based on observed voting trends
+- Adjusted estimates using population weights to reflect real demographic distributions
+- Aggregated weighted probabilities to estimate national vote share
+  
+### Key Result
+- Estimated 34.7% Conservative vote share, assuming demographic patterns remain consistent
+- Found that province population size heavily influences national outcomes
+- Identified clear demographic trends in political support by age and gender
 
-To clean the GSS survey data, responses to Question 11 (“Which party do you think you will likely vote for?”) 
-were first filtered so that only those selecting a valid party option (1–6) were kept. The dataset was 
-then restricted to respondents who identified as male or female, since these were the only gender categories 
-represented in the census data, and because gender will be used as a predictor in the regression model. 
-Observations from the Northwest Territories and Yukon were removed because these territories were not 
-included in the census dataset. Gender categories were recoded as “Male”/“Female” to match the census format.
-An age variable was created by subtracting birth year from 2019, and a variable to indicate conservative 
-support was created.
+### Tools & Skills Demonstrated
+- R (data cleaning, modelling, visualisation)
+- Logistic regression
+- Survey data analysis
+- Post-stratification & weighting
+- Statistical reasoning and interpretation
 
-For the CES census data, ages were rounded to whole numbers, individuals under 18 were removed, and the variable 
-“sex” was renamed to “gender.” Provincial names were recoded numerically to align with the survey data, 
-and all columns except gender, age, and province were dropped.
-
-#### Variables Description 
-
-The variables that are included in the study are age, gender, province, support_cons, cons_proportion. 
-The ages range from 18 to 100 as 18 is the minimum age to vote in Canada. The gender variable can only 
-take on “Male” or “Female” due to the constraints in the census data. The province variable takes on values 
-1 to 10 that represent Newfoundland and Labrador, Prince Edward Island, Nova Scotia, New Brunswick, Quebec, O
-ntario, Manitoba, Saskatchewan, Alberta and British Columbia respectively. The variable support_cons is an 
-indicator variable that takes on a value of 1 or 0, 1 is taken if the individual supports the conservative 
-party and 0 if they do not. Further, the cons_proportion variable gives the proportion of conservative voters 
-in the data or the sum of conservative voters over the entire population. 
+### Why This Project Matters
+This project demonstrates my ability to work with real-world survey data, apply statistical models, and translate complex analysis into meaningful, population-level insights — core skills for a junior data analyst.
 
 #### Distribution of the data 
 
@@ -119,42 +110,11 @@ survey (there are only 35 people in this age group).
 The plot is another pie graph that showcases the conservative support by province. Provinces with
 more people have a larger weight in the pie.
 
-### Methods
 
-The model will predict whether or not someone will vote conservative based on demographics from the census 
-data. A Logistic regression model is a statistical model that can model a binary response variable 
-using a log function. Age and gender were as predictor variables for the model due the trends with political 
-beliefs. Age is a numerical predictor and gender is a categorical predictor. A finite population correction 
-was implemented to fix the standard error estimates so they reflect the target population better. The outcome 
-of the logistic regression model is the log likelihood of an individual to vote conservative based off 
-their age and gender. This likelihood can be rearranged as the probability of that individual to vote conservative.
-
-y = -1.4739 + 0.0107x(age) + 0.5272I(male) + e
-
-The poststratification process creates a weighted average based off of the proportions of the demographic 
-in the population. Post-stratification ensures that each demographic group is properly represented in the 
-sample, allowing for more accurate population level predictions.
-
-Using the logistic model, conservative support probabilities were computed for every individual in the census data. The census data were then grouped by province, provincial cell totals were calculated, and each estimated probability was weighted by its province’s population. Provincial weighted means were obtained, then summed and divided by the national population to estimate the overall proportion of conservative voters.
-
-### Results 
 
 ![Alt text](images/election5.png)
 
-This produced an estimated conservative vote proportion of 0.347, assuming census data are representative of 2023 voters and that age and gender adequately predict conservative support. This value also represents the weighted probability of conservative votes based by
-province.
 
-### Bibliography
-
-1. Stephenson, Laura B; Harell, Allison; Rubenson, Daniel; Loewen, Peter John. (2020) 2019 Canadian
-Election Study - Phone Survey Technical Report.pdf, 2019 Canadian Election Study - Phone Survey,
-https://doi.org/10.7910/DVN/8RHLG1/1PBGR3, Harvard Dataverse, V1
-2. Government of Canada, S. C. (2019, February 6). General Social Survey - Family (GSS). Surveys and
-statistical programs. https://www23.statcan.gc.ca/imdb/p2SV.pl?Function=getSurvey&SDDS=450.
-3. Holtz, Y. (n.d.). ggplot2 Piechart. – the R Graph Gallery.https://www.r-graph-gallery.com/piechart-
-ggplot2.html.
-
-All analysis for this report was programmed using R version 4.0.2.
 
 ## University Paper: Forecasting New York Harbor Gas Prices
 

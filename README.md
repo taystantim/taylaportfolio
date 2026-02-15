@@ -109,43 +109,82 @@ more people have a larger weight in the pie.
 
 ### Project Overview
 
-This project analyzed historical gasoline prices to understand price trends and forecast short-term future prices. Using weekly New York Harbor gasoline prices from 2000–2010, I built and evaluated time-series models to capture trend, seasonality, and temporal dependence.
+This project analyzes weekly New York Harbor gasoline prices (1986–2026) using time series modeling and volatility analysis. The objective was to model long-term price dynamics, evaluate forecast performance, and investigate volatility clustering using GARCH methods.
+
+### The analysis combines:
+- ARIMA modeling for price forecasting
+- Out-of-sample validation
+- Volatility modeling (ARCH/GARCH)
+- Interpretation of volatility persistence
+
+### Objective
+- Determine whether gas prices are stationary
+- Identify appropriate ARIMA(p,d,q) structure
+- Evaluate forecast accuracy using rolling validation
+- Detect volatility clustering
+- Model conditional variance using GARCH(1,1)
 
 ### Data
-Source: U.S. Energy Information Administration (EIA)
-Frequency: Weekly
-Metric: Conventional regular gasoline price (cents per gallon)
-Observations: 575 data points
-
-### What I Did
-- Explored long-term trends and seasonality in gasoline prices
-- Transformed non-stationary data using differencing
-- Used ACF and PACF plots to guide model selection
-- Built and tested multiple ARIMA and Seasonal ARIMA models
-- Evaluated models using AIC, AICc, BIC, and residual diagnostics
-- Generated 10-week forecasts with prediction intervals
+- Weekly gasoline prices ($/gallon)
+- Time period: 1986–2026
+- Frequency: Weekly (ts/xts format)
 
 ### Methodology
-- Identified strong upward trend and yearly seasonality in prices
-- Applied second-order differencing to achieve stationarity
-- Tested several ARIMA and seasonal ARIMA configurations
-= Selected the best-performing model based on fit and assumptions
+1️. Transformation & Stationarity
+- Applied log transformation to stabilize variance
+- Conducted Augmented Dickey-Fuller (ADF) test
+- First differencing achieved stationarity (p-value < 0.01)
 
-### Final model selected:
- ARIMA(2, 1, 2) × (0, 1, 1)\₅₂
-This model effectively captured both short-term price dynamics and annual seasonal patterns.
+2. Using ACF and PACF diagnostics:
+ACF: gradual decay
+PACF: significant early lags
 
-### Key Results
-- Produced short-term forecasts for gasoline prices in mid-2010
-- Forecast uncertainty widened quickly, reflecting volatility in energy markets
-- Results highlight the limits of long-range forecasting for commodity prices
+Selected model:ARIMA(4,1,1)
 
-### Tools & Skills Demonstrated
-- Time series analysis
-- ARIMA & Seasonal ARIMA modelling
-- Forecasting and uncertainty estimation
-- Model diagnostics (residuals, Ljung–Box tests)
-- R (data analysis and visualization)
+Model diagnostics:
+Residual autocorrelation ≈ 0
+AICc minimized
+No significant remaining structure in residuals
+
+3. Out-of-Sample Validation
+- Split data into training and testing sets
+- Performed rolling one-step-ahead forecasting
+- Compared forecast error metrics (RMSE, MAE)
+- Rolling RMSE ≈ 0.0469
+- This indicates strong short-term predictive performance.
+
+4. Volatility Analysis
+Visual inspection of returns showed volatility clustering — periods of high volatility followed by high volatility.
+Squared returns plot confirmed clustering behavior.
+
+5. Fitted GARCH(1,1) to model conditional variance:
+Findings:
+α + β close to 1 → strong volatility persistence
+Half-life ≈ 8 weeks
+Interpretation:
+Volatility shocks decay gradually and remain impactful for approximately two months
+
+### Forecast Visualization
+The model produces:
+Point forecasts
+95% confidence intervals
+Back-transformed price predictions
+Forecast intervals widen over time, reflecting increasing uncertainty
+
+### Key Insights
+- Gas prices follow a non-stationary process but become stationary after differencing.
+- ARIMA(4,1,1) effectively captures mean dynamics.
+- Volatility clustering is present and statistically significant.
+- GARCH modeling improves understanding of conditional risk.
+- Volatility persistence suggests sustained periods of market instability.
+
+### Tools & Libraries
+- R
+- forecast
+- tseries
+- rugarch
+- xts / zoo
+- ggplot2
 
 ### Why This Project Matters
 This project demonstrates my ability to work with real-world time-series data, select appropriate statistical models, and communicate uncertainty

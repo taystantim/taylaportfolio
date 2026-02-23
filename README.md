@@ -26,7 +26,7 @@ Mainstream and Budget families contributed the majority of chip sales, indicatin
 
 ![Alt text](images/trial.png)
 
-Statistically significant uplift observed in Store 78, suggesting genuine performance improvement rather than random variation.
+Statistically significant uplift observed in Store 86, suggesting genuine performance improvement rather than random variation.
 
 ### Recommendations 
 

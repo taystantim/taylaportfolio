@@ -35,6 +35,10 @@ Statistically significant uplift observed in Store 86, suggesting genuine perfor
 - Use further trials to test pricing or promotional strategies
 - Continue monitoring performance to ensure consistent execution
 
+### Business Impact 
+
+This framework can help retailers evaluate category trials with greater statistical confidence before scaling nationwide.
+
 ## Video: Selecting the Best Predictor for the Median Housing Value of Calfornia Homes 
 
 [<img src="images/calproj.png">](https://youtu.be/qNsJqWcyhRY)

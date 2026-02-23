@@ -20,13 +20,11 @@ Using transaction-level and customer segmentation data, I evaluated purchasing b
 - Measured uplift using scaled comparisons and confidence intervals
   
 ### Sales Contribution by Customer Segment
-
 ![Alt text](images/lifestage.png)
 
 Mainstream and Budget families contributed the majority of chip sales, indicating trial success would depend heavily on family-dense store demographics.
 
 ### Trial vs Control Comparison
-
 ![Alt text](images/trial.png)
 
 Statistically significant uplift observed in Store 86, suggesting genuine performance improvement rather than random variation.
@@ -42,21 +40,31 @@ Statistically significant uplift observed in Store 86, suggesting genuine perfor
 
 This framework provides a structured approach for evaluating retail trials with statistical confidence before large-scale rollout.
 
-## Video: Selecting the Best Predictor for the Median Housing Value of Calfornia Homes 
+## Forecasting New York Harbor Gas Prices
 
 ### Business Question
 
-Which variable best predicts median home value across California districts?
+Can historical price patterns and volatility behavior improve short-term fuel price forecasting?
 
-### Overview 
+### Context
 
-Using regression analysis, I evaluated multiple predictors and assessed model performance to determine the strongest explanatory variable.
+Using 40 years of weekly gasoline price data, I modeled price trends and volatility dynamics to evaluate forecast reliability and market risk persistence.
 
-[<img src="images/calproj.png">](https://youtu.be/qNsJqWcyhRY)
+### New York Harbor Gas Prices 1988-2026
+![Alt text](images/00002d.png)
 
-### Key Insight
+### Approach
 
-Median income emerged as the strongest predictor of housing value, explaining a substantial proportion of variance across districts.
+- Log transformation + differencing to achieve stationarity
+- ARIMA modeling for mean dynamics
+- Rolling out-of-sample validation
+- GARCH(1,1) modeling to capture volatility clustering
+
+### Insights 
+- Gas prices exhibit statistically significant volatility clustering, indicating persistent risk shocks.
+- Volatility shocks persist ~8 weeks (GARCH half-life).
+- Forecast uncertainty expands rapidly during turbulent periods.
+- Out-of-sample validation demonstrates strong short-term predictive performance (RMSE ≈ 0.047).
 
 ## Predicting Conservative Vote Share – Canadian Federal Election
 
@@ -74,48 +82,37 @@ What proportion of voters are expected to support the Conservative Party based o
 Using survey data and census-based population weighting, I built a logistic regression model to estimate national Conservative vote share.
 
 ### Provincial Weight Distribution
-
 ![Alt text](images/election1.png)
+
 Ontario and Quebec heavily influence national vote share due to population size.
 
 ### Gender vs Conservative Support
-
 ![Alt text](images/election2.png)
+
 Male respondents showed higher probability of Conservative support across most age groups. 
 
 ### Conservative Support by Province
-
 ![Alt text](images/election4.png)
 
 ### Key Result
 
 The model estimated approximately 34.7% Conservative vote share, after applying provincial demographic weighting.
 
-## Forecasting New York Harbor Gas Prices
+## Video: Selecting the Best Predictor for the Median Housing Value of Calfornia Homes 
 
 ### Business Question
 
-Can historical price patterns and volatility behavior improve short-term fuel price forecasting?
+Which variable best predicts median home value across California districts?
 
-### Context
+### Overview 
 
-Using 40 years of weekly gasoline price data, I modeled price trends and volatility dynamics to evaluate forecast reliability and market risk persistence.
+Using regression analysis, I evaluated multiple predictors and assessed model performance to determine the strongest explanatory variable.
 
-### New York Harbor Gas Prices 1988-2026
+[<img src="images/calproj.png">](https://youtu.be/qNsJqWcyhRY)
 
-![Alt text](images/00002d.png)
+### Key Insight
 
-### Approach
+Median income emerged as the strongest predictor of housing value, explaining a substantial proportion of variance across districts.
 
-- Log transformation + differencing to achieve stationarity
-- ARIMA modeling for mean dynamics
-- Rolling out-of-sample validation
-- GARCH(1,1) modeling to capture volatility clustering
-
-### Insights 
-- Gas prices exhibit statistically significant volatility clustering, indicating persistent risk shocks.
-- Volatility shocks persist ~8 weeks (GARCH half-life).
-- Forecast uncertainty expands rapidly during turbulent periods.
-- Out-of-sample validation demonstrates strong short-term predictive performance (RMSE ≈ 0.047).
 
 

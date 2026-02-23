@@ -1,4 +1,7 @@
-# Tayla's Projects 
+# About Me 
+Statistics graduate specializing in time series forecasting, regression modeling, and data visualization. I build interpretable models that translate complex data into clear business insights.
+
+# My Projects 
 
 ## Retail Trial Analysis – Chip Category
 
@@ -37,17 +40,29 @@ Statistically significant uplift observed in Store 86, suggesting genuine perfor
 
 ### Business Impact 
 
-This framework can help retailers evaluate category trials with greater statistical confidence before scaling nationwide.
+This framework provides a structured approach for evaluating retail trials with statistical confidence before large-scale rollout.
 
 ## Video: Selecting the Best Predictor for the Median Housing Value of Calfornia Homes 
 
+### Business Question
+
+Which variable best predicts median home value across California districts?
+
+### Overview 
+
+Using regression analysis, I evaluated multiple predictors and assessed model performance to determine the strongest explanatory variable.
+
 [<img src="images/calproj.png">](https://youtu.be/qNsJqWcyhRY)
+
+### Key Insight
+
+Median income emerged as the strongest predictor of housing value, explaining a substantial proportion of variance across districts.
 
 ## Predicting Conservative Vote Share – Canadian Federal Election
 
 ### Business Question
 
-What proportion of people will vote conservative in the upcoming federal election?
+What proportion of voters are expected to support the Conservative Party based on demographic patterns?
 
 ### Data Used
 
@@ -72,6 +87,10 @@ Male respondents showed higher probability of Conservative support across most a
 
 ![Alt text](images/election4.png)
 
+### Key Result
+
+The model estimated approximately 34.7% Conservative vote share, after applying provincial demographic weighting.
+
 ## Forecasting New York Harbor Gas Prices
 
 ### Business Question
@@ -82,7 +101,7 @@ Can historical price patterns and volatility behavior improve short-term fuel pr
 
 Using 40 years of weekly gasoline price data, I modeled price trends and volatility dynamics to evaluate forecast reliability and market risk persistence.
 
-### New York Harbour Gas Prices 1988-2026
+### New York Harbor Gas Prices 1988-2026
 
 ![Alt text](images/00002d.png)
 
@@ -94,9 +113,9 @@ Using 40 years of weekly gasoline price data, I modeled price trends and volatil
 - GARCH(1,1) modeling to capture volatility clustering
 
 ### Insights 
-- Gas prices exhibit strong volatility clustering.
+- Gas prices exhibit statistically significant volatility clustering, indicating persistent risk shocks.
 - Volatility shocks persist ~8 weeks (GARCH half-life).
 - Forecast uncertainty expands rapidly during turbulent periods.
-- Model performance indicates strong short-term predictive reliability (RMSE ≈ 0.047).
+- Out-of-sample validation demonstrates strong short-term predictive performance (RMSE ≈ 0.047).
 
 

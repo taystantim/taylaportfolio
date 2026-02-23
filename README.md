@@ -80,7 +80,7 @@ Using 40 years of weekly gasoline price data, I modeled price trends and volatil
 
 ### New York Harbour Gas Prices 1988-2026
 
-
+![Alt text](images/00002d.png)
 
 ### Approach
 

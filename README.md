@@ -1,7 +1,5 @@
 # Tayla Stanley 
 
-Statistics Graduate | Data Analyst Time Series • Regression • Excel • R • SQL •Forecasting
-
 Statistics graduate specializing in time series forecasting, regression modeling, and data visualization. I build interpretable models that translate complex data into clear business insights.
 
 ## Featured Projects 

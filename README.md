@@ -68,91 +68,31 @@ Male respondents showed higher probability of Conservative support across most a
 
 ![Alt text](images/election4.png)
 
-
 ## Forecasting New York Harbor Gas Prices
 
-### Project Overview
+### Business Question
 
-This project analyzes weekly New York Harbor gasoline prices (1986–2026) using time series modeling and volatility analysis. The objective was to model long-term price dynamics, evaluate forecast performance, and investigate volatility clustering using GARCH methods.
+Can historical price patterns and volatility behavior improve short-term fuel price forecasting?
 
-### The analysis combines:
-- ARIMA modeling for price forecasting
-- Out-of-sample validation
-- Volatility modeling (ARCH/GARCH)
-- Interpretation of volatility persistence
+### Context
 
-### Objective
-- Determine whether gas prices are stationary
-- Identify appropriate ARIMA(p,d,q) structure
-- Evaluate forecast accuracy using rolling validation
-- Detect volatility clustering
-- Model conditional variance using GARCH(1,1)
+Using 40 years of weekly gasoline price data, I modeled price trends and volatility dynamics to evaluate forecast reliability and market risk persistence.
 
-### Data
-- Weekly gasoline prices ($/gallon)
-- Time period: 1986–2026
-- Frequency: Weekly (ts/xts format)
+### New York Harbour Gas Prices 1988-2026
 
-### Methodology
-1️. Transformation & Stationarity
-- Applied log transformation to stabilize variance
-- Conducted Augmented Dickey-Fuller (ADF) test
-- First differencing achieved stationarity (p-value < 0.01)
 
-2. Using ACF and PACF diagnostics:
-ACF: gradual decay
-PACF: significant early lags
 
-Selected model:ARIMA(4,1,1)
+### Approach
 
-Model diagnostics:
-Residual autocorrelation ≈ 0
-AICc minimized
-No significant remaining structure in residuals
+- Log transformation + differencing to achieve stationarity
+- ARIMA modeling for mean dynamics
+- Rolling out-of-sample validation
+- GARCH(1,1) modeling to capture volatility clustering
 
-3. Out-of-Sample Validation
-- Split data into training and testing sets
-- Performed rolling one-step-ahead forecasting
-- Compared forecast error metrics (RMSE, MAE)
-- Rolling RMSE ≈ 0.0469
-- This indicates strong short-term predictive performance.
-
-4. Volatility Analysis
-Visual inspection of returns showed volatility clustering — periods of high volatility followed by high volatility.
-Squared returns plot confirmed clustering behavior.
-
-5. Fitted GARCH(1,1) to model conditional variance:
-Findings:
-α + β close to 1 → strong volatility persistence
-Half-life ≈ 8 weeks
-Interpretation:
-Volatility shocks decay gradually and remain impactful for approximately two months
-
-### Forecast Visualization
-The model produces:
-Point forecasts
-95% confidence intervals
-Back-transformed price predictions
-Forecast intervals widen over time, reflecting increasing uncertainty
-
-### Key Insights
-- Gas prices follow a non-stationary process but become stationary after differencing.
-- ARIMA(4,1,1) effectively captures mean dynamics.
-- Volatility clustering is present and statistically significant.
-- GARCH modeling improves understanding of conditional risk.
-- Volatility persistence suggests sustained periods of market instability.
-
-### Tools & Libraries
-- R
-- forecast
-- tseries
-- rugarch
-- xts / zoo
-- ggplot2
-
-### Why This Project Matters
-This project demonstrates my ability to work with real-world time-series data, select appropriate statistical models, and communicate uncertainty
-
-![Alt text](images/gas12.png)
+### Insights 
+- Gas prices exhibit strong volatility clustering.
+- Volatility shocks persist ~8 weeks (GARCH half-life).
+- Forecast uncertainty expands rapidly during turbulent periods.
+- Model performance indicates strong short-term predictive reliability (RMSE ≈ 0.047).
 
 

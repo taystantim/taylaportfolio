@@ -18,29 +18,22 @@ Using transaction-level and customer segmentation data, I evaluated purchasing b
   
 ### Sales Contribution by Customer Segment
 
+![Alt text](images/lifestage.png)
+
 Mainstream and Budget families contributed the majority of chip sales, indicating trial success would depend heavily on family-dense store demographics.
 
 ### Trial vs Control Comparison
 
-Statistically significant uplift observed in Store X (confidence interval excluded zero), suggesting genuine performance improvement rather than random variation
+![Alt text](images/trial.png)
+
+Statistically significant uplift observed in Store 78, suggesting genuine performance improvement rather than random variation.
+
+### Recommendations 
 
 - Roll out the trial selectively to stores with similar customer profiles
 - Focus expansion on stores most comparable to the strongest-performing trial store
 - Use further trials to test pricing or promotional strategies
 - Continue monitoring performance to ensure consistent execution
-
-### Tools & Skills Demonstrated
-
-- Microsoft Excel (pivot tables, formulas, charts)
-- Data cleaning and validation
-- Customer segmentation analysis
-- Trial evaluation and basic statistical analysis
-- Data visualisation and storytelling
-  
-### Why This Project Matters
-
-This project demonstrates my ability to take raw data, turn it into meaningful insights, and communicate results in a way that supports business decision-making.
-
 
 ## Video: Selecting the Best Predictor for the Median Housing Value of Calfornia Homes 
 
@@ -48,9 +41,9 @@ This project demonstrates my ability to take raw data, turn it into meaningful i
 
 ## Predicting Conservative Vote Share – Canadian Federal Election
 
-### Project Overview
+### Business Question
 
-This project used Canadian election and census data to estimate the proportion of voters expected to support the Conservative Party in the next federal election. The goal was to apply statistical modelling and demographic weighting to produce a population-level prediction.
+What proportion of people will vote conservative in the upcoming federal election?
 
 ### Data Used
 
@@ -59,48 +52,21 @@ This project used Canadian election and census data to estimate the proportion o
 
 ### What I Did
 
-- Cleaned and prepared large survey and census datasets
-- Filtered and recoded demographic variables for consistency
-- Engineered key variables including age, gender, and conservative support
-- Built a logistic regression model to predict likelihood of voting Conservative
-- Applied post-stratification weighting by province to scale predictions to the national population
-- Visualised demographic and regional patterns in voting behaviour
+Using survey data and census-based population weighting, I built a logistic regression model to estimate national Conservative vote share.
 
-### Methodology
-
-- Modelled Conservative support as a binary outcome using logistic regression
-- Used age and gender as predictors based on observed voting trends
-- Adjusted estimates using population weights to reflect real demographic distributions
-- Aggregated weighted probabilities to estimate national vote share
-  
-### Key Result
-- Estimated 34.7% Conservative vote share, assuming demographic patterns remain consistent
-- Found that province population size heavily influences national outcomes
-- Identified clear demographic trends in political support by age and gender
-
-### Tools & Skills Demonstrated
-- R (data cleaning, modelling, visualisation)
-- Logistic regression
-- Survey data analysis
-- Post-stratification & weighting
-- Statistical reasoning and interpretation
-
-### Why This Project Matters
-This project demonstrates my ability to work with real-world survey data, apply statistical models, and translate complex analysis into meaningful, population-level insights — core skills for a junior data analyst.
-
-#### Distribution of the data 
+### Provincial Weight Distribution
 
 ![Alt text](images/election1.png)
-The plot depicts the frequencies of people in the census data by province. Ontario and Quebec
-will have the greatest influence on the proportion of conservative votes. 
+Ontario and Quebec heavily influence national vote share due to population size.
+
+### Gender vs Conservative Support
 
 ![Alt text](images/election2.png)
-The plot depicts the relationship between gender and conservative political beliefs. The bar graph shows
-the frequency of males and females the survey data set. 
+Male respondents showed higher probability of Conservative support across most age groups. 
+
+### Conservative Support by Province
 
 ![Alt text](images/election4.png)
-The plot is another pie graph that showcases the conservative support by province. Provinces with
-more people have a larger weight in the pie.
 
 
 ## Forecasting New York Harbor Gas Prices

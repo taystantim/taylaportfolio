@@ -2,29 +2,27 @@
 
 ## Retail Trial Analysis – Chip Category
 
-### Project Summary
+### Business Question
 
-In this project, I analysed supermarket transaction and customer data to understand chip purchasing behaviour and evaluate the impact of a store-level trial. The goal was to identify which customer groups drive chip sales and determine whether the trial led to a real improvement in performance. The analysis was completed entirely in Microsoft Excel, demonstrating my ability to clean data, perform analysis, and communicate insights clearly without relying on advanced programming tools.
+Did a store-level chip trial generate a true performance uplift, and which customer segments drive category growth?
 
-### What I Did
+### Context
 
-- Cleaned and prepared transaction and customer datasets
-- Merged datasets using Excel formulas and lookups
-- Analysed chip sales by customer life stage and affluence
-- Built pivot tables to summarise sales, volume, and purchasing behaviour
-- Selected appropriate control stores by comparing historical sales patterns
-- Compared trial stores against scaled control stores
-- Calculated percentage differences and confidence intervals to assess trial impact
-- Created charts and a client-ready presentation to communicate findings
+Using transaction-level and customer segmentation data, I evaluated purchasing behaviour and measured trial performance against carefully selected control stores. The analysis was completed entirely in Excel to simulate a real-world retail analytics workflow.
 
-### Key Findings
+### Approach
+- Cleaned and merged transaction + customer datasets
+- Identified key customer segments (life stage × affluence)
+- Selected comparable control stores using historical sales trends
+- Measured uplift using scaled comparisons and confidence intervals
+  
+### Sales Contribution by Customer Segment
 
-- Mainstream and Budget families accounted for the largest share of chip sales
-- Budget customers purchased chips more frequently but at lower price points
-- Premium customers contributed a smaller proportion of total sales
-- The trial resulted in a statistically significant uplift in some stores, suggesting a genuine performance improvement rather than random variation
+Mainstream and Budget families contributed the majority of chip sales, indicating trial success would depend heavily on family-dense store demographics.
 
-### Recommendations
+### Trial vs Control Comparison
+
+Statistically significant uplift observed in Store X (confidence interval excluded zero), suggesting genuine performance improvement rather than random variation
 
 - Roll out the trial selectively to stores with similar customer profiles
 - Focus expansion on stores most comparable to the strongest-performing trial store

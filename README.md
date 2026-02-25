@@ -4,10 +4,10 @@ Statistics graduate specializing in time series forecasting, regression modeling
 
 # Featured Projects 
 
-### - Retail Trial Analysis (Excel) 
-### - Gas Price Forecasting (R) 
-### - Election Vote Modeling (R)
-### - Modeling House Prices (R) 
+#### - Retail Trial Analysis (Excel) 
+#### - Gas Price Forecasting (R) 
+#### - Election Vote Modeling (R)
+#### - Modeling House Prices (R) 
 
 # Retail Trial Analysis
 

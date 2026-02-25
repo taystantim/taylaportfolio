@@ -1,4 +1,4 @@
-# Tayla Stanley 
+## About me 
 
 Statistics graduate specializing in time series forecasting, regression modeling, and data visualization. I build interpretable models that translate complex data into clear business insights.
 
@@ -9,9 +9,7 @@ Statistics graduate specializing in time series forecasting, regression modeling
 - Election Vote Modeling (R)
 - Modeling House Prices (R) 
 
-# My Projects 
-
-## Retail Trial Analysis – Chip Category
+# Retail Trial Analysis
 
 ### Business Question
 
@@ -48,7 +46,7 @@ During the trial period, Store 86 delivered a +13% sales uplift vs its scaled co
 
 This framework provides a structured approach for evaluating retail trials with statistical confidence before large-scale rollout.
 
-## Forecasting New York Harbor Gas Prices
+# Forecasting New York Harbor Gas Prices
 
 ### Business Question
 
@@ -74,7 +72,7 @@ Using 40 years of weekly gasoline price data, I modeled price trends and volatil
 - Forecast uncertainty expands rapidly during turbulent periods.
 - Out-of-sample validation yielded RMSE ≈ 0.047, indicating strong short-term predictive performance relative to weekly price variation.
 
-## Predicting Conservative Vote Share – Canadian Federal Election
+# Predicting Conservative Vote Share in the Canadian Federal Election
 
 ### Business Question
 
@@ -108,7 +106,7 @@ Conservative support increases with age, peaking around 40% among respondents ag
 
 The model estimated approximately 34.7% Conservative vote share, after applying provincial demographic weighting.
 
-## Video: Selecting the Best Predictor for the Median Housing Value of Calfornia Homes 
+# Video Project: Selecting the Best Predictor for the Median Housing Value of Calfornia Homes 
 
 ### Business Question
 

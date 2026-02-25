@@ -1,8 +1,8 @@
-## About me 
+# About me 
 
 Statistics graduate specializing in time series forecasting, regression modeling, and data visualization. I build interpretable models that translate complex data into clear business insights.
 
-## Featured Projects 
+# Featured Projects 
 
 - Retail Trial Analysis (Excel) 
 - Gas Price Forecasting (R) 

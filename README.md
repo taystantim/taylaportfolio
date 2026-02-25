@@ -70,9 +70,9 @@ Using 40 years of weekly gasoline price data, I modeled price trends and volatil
 
 ### Insights 
 - Gas prices exhibit statistically significant volatility clustering, indicating persistent risk shocks.
-- Volatility shocks persist ~8 weeks (GARCH half-life).
+- GARCH(1,1) results show volatility persistence (α + β ≈ 0.97), with shocks decaying over approximately 8 weeks — indicating prolonged periods of elevated risk.
 - Forecast uncertainty expands rapidly during turbulent periods.
-- Out-of-sample validation demonstrates strong short-term predictive performance (RMSE ≈ 0.047).
+- Out-of-sample validation yielded RMSE ≈ 0.047, indicating strong short-term predictive performance relative to weekly price variation.
 
 ## Predicting Conservative Vote Share – Canadian Federal Election
 
@@ -100,7 +100,7 @@ Ontario and Quebec heavily influence national vote share due to population size.
 Male respondents showed a higher support rate (41%) compared to females (29%), suggesting gender plays a meaningful role in conservative voting probability.
 
 ### Conservative Support by Province
-![Alt text](images/election4.png)
+![Alt text](images/agegroup.png)
 
 Conservative support increases with age, peaking around 40% among respondents aged 51–68.
 

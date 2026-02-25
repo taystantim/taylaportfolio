@@ -28,7 +28,7 @@ Using transaction-level and customer segmentation data, I evaluated purchasing b
 ### Sales Contribution by Customer Segment
 ![Alt text](images/lifestage.png)
 
-Mainstream and Budget families contributed to 74% of chip sales, indicating trial success would depend heavily on family-dense store demographics.
+Mainstream products dominate chip sales across most life stages, with particularly strong performance among Older Families and Young Singles/Couples.
 
 ### Trial vs Control Comparison
 ![Alt text](images/trial.png)

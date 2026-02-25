@@ -70,7 +70,7 @@ Using 40 years of weekly gasoline price data, I modeled price trends and volatil
 
 ### Insights 
 - Gas prices exhibit statistically significant volatility clustering, indicating persistent risk shocks.
-- GARCH(1,1) results show volatility persistence (α + β ≈ 0.97), with shocks decaying over approximately 8 weeks — indicating prolonged periods of elevated risk.
+- GARCH(1,1) results show volatility persistence (α + β ≈ 0.97), with shocks decaying over approximately 8 weeks, indicating prolonged periods of elevated risk.
 - Forecast uncertainty expands rapidly during turbulent periods.
 - Out-of-sample validation yielded RMSE ≈ 0.047, indicating strong short-term predictive performance relative to weekly price variation.
 

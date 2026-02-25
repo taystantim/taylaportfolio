@@ -56,7 +56,7 @@ Can historical price patterns and volatility behavior improve short-term fuel pr
 
 Using 40 years of weekly gasoline price data, I modeled price trends and volatility dynamics to evaluate forecast reliability and market risk persistence.
 
-### New York Harbor Gas Prices 1988-2026 Forecasted
+### New York Harbor Gas Prices 1988-2026
 
 ![Alt text](images/gasforecast.png)
 

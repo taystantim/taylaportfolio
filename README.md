@@ -30,12 +30,12 @@ Using transaction-level and customer segmentation data, I evaluated purchasing b
 ### Sales Contribution by Customer Segment
 ![Alt text](images/lifestage.png)
 
-Mainstream and Budget families contributed the majority of chip sales, indicating trial success would depend heavily on family-dense store demographics.
+Mainstream and Budget families contributed to 74% of chip sales, indicating trial success would depend heavily on family-dense store demographics.
 
 ### Trial vs Control Comparison
 ![Alt text](images/trial.png)
 
-Statistically significant uplift observed in Store 86, suggesting genuine performance improvement rather than random variation.
+During the trial period, Store 86 delivered a +13% sales uplift vs its scaled control, indicating a meaningful improvement attributable to the trial intervention. (13% = trial sales were 13% higher than expected based on the scaled control benchmark.)
 
 ### Recommendations 
 
@@ -97,10 +97,12 @@ Ontario and Quebec heavily influence national vote share due to population size.
 ### Gender vs Conservative Support
 ![Alt text](images/election2.png)
 
-Male respondents showed higher probability of Conservative support across most age groups. 
+Male respondents showed a higher support rate (41%) compared to females (29%), suggesting gender plays a meaningful role in conservative voting probability.
 
 ### Conservative Support by Province
 ![Alt text](images/election4.png)
+
+Conservative support increases with age, peaking around 40% among respondents aged 51–68.
 
 ### Key Result
 

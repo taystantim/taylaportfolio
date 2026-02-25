@@ -56,12 +56,17 @@ Can historical price patterns and volatility behavior improve short-term fuel pr
 
 Using 40 years of weekly gasoline price data, I modeled price trends and volatility dynamics to evaluate forecast reliability and market risk persistence.
 
-### New York Harbor Gas Prices 1988-2026
+### New York Harbor Gas Prices 1988-2026 Forcasted
 
-![Alt text](images/gas forecast.png)
+![Alt text](images/gasforecast.png)
+
+This plot shows the ARIMA-based forecast of weekly New York gas prices, including a 95% prediction interval. The widening confidence band reflects increasing uncertainty over longer forecast horizons. The model captures long-term persistence in prices while acknowledging the high variability characteristic of energy markets.
+
+### Structural Breaks in Gas Prices
 
 ![Alt text](images/plot4_structural_breaks.png)
 
+This chart highlights major structural breaks in the gas price series, including the 2008 financial crisis, the 2020 COVID shock, and the 2022 geopolitical energy shock. These regime shifts explain large deviations from historical trends and reinforce the importance of modeling both mean dynamics and volatility.
 ### Approach
 
 - Log transformation + differencing to achieve stationarity

@@ -31,7 +31,7 @@ Using transaction-level and customer segmentation data, I evaluated purchasing b
 Mainstream products dominate chip sales across most life stages, with particularly strong performance among Older Families and Young Singles/Couples.
 
 ### Trial vs Control Comparison
-![Alt text](images/trial.png)
+![Alt text](images/trialsales.png)
 
 During the trial period, Store 86 delivered a +13% sales uplift vs its scaled control, indicating a meaningful improvement attributable to the trial intervention. (13% = trial sales were 13% higher than expected based on the scaled control benchmark.)
 

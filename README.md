@@ -33,7 +33,7 @@ Mainstream products dominate chip sales across most life stages, with particular
 ### Trial vs Control Comparison
 ![Alt text](images/trialsales.png)
 
-During the trial period, Store 86 delivered a +13% sales uplift vs its scaled control, indicating a meaningful improvement attributable to the trial intervention. (13% = trial sales were 13% higher than expected based on the scaled control benchmark.)
+The trial generated approximately $324 in incremental revenue over the 3-month period for Store 86, representing a 13% uplift in category sales.
 
 ### Recommendations 
 

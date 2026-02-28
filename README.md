@@ -33,7 +33,7 @@ Mainstream products dominate chip sales across most life stages, with particular
 ### Trial vs Control Comparison
 ![Alt text](images/trialsales.png)
 
-Beyond the 13% uplift, the trial effect exceeded 3.05 standard deviations above historical pre-trial variation, indicating a large and statistically meaningful impact.
+The trial generated approximately $324 in incremental revenue over the 3-month period for Store 86, representing a 13% uplift in category sales. The trial effect exceeded 3.05 standard deviations above historical pre-trial variation, indicating a large and statistically meaningful impact.
 
 ### Recommendations 
 

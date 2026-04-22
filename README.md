@@ -1,6 +1,10 @@
 # About me 
 
-Statistics graduate specializing in time series forecasting, regression modeling, and data visualization. I build interpretable models that translate complex data into clear business insights.
+I’m a Statistics graduate from the University of Toronto with a strong interest in data analysis.
+
+I’ve worked with Excel, R, SQL, and Python to analyze datasets, build models, and evaluate performance, with a focus on producing clear insights. I’ve analyzed areas such as sales performance and trends over time, using structured approaches to solve problems and measure business impact.
+
+I’m looking to start my career in data analytics, where I can keep building my skills and contribute to real business problems.
 
 # Featured Projects 
 

@@ -16,7 +16,7 @@ I’m looking to start my career in data analytics, where I can keep building my
 # Retail Trial Analysis
 
 <a href="https://github.com/taystantim/-Chip-Category-Trial-Analysis" target="_blank">
-  <button>View Project Code</button>
+  <button>View Full Project</button>
 </a>
 
 ### Business Question
@@ -57,7 +57,7 @@ This framework provides a structured approach for evaluating retail trials with 
 # Forecasting New York Harbor Gas Prices
 
 <a href="https://github.com/taystantim/gas-price-forecasting" target="_blank">
-  <button>View Project Code</button>
+  <button>View Full Project</button>
 </a>
 
 ### Business Question
@@ -95,7 +95,7 @@ This chart highlights major structural breaks in the gas price series, including
 # Predicting Conservative Vote Share in the Canadian Federal Election
 
 <a href="https://github.com/taystantim/Predicting-Conservative-Vote-Share-in-the-Canadian-Federal-Election" target="_blank">
-  <button>View Project Code</button>
+  <button>View Full Project</button>
 </a>
 
 ### Business Question

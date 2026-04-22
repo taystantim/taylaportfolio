@@ -11,6 +11,10 @@ Statistics graduate specializing in time series forecasting, regression modeling
 
 # Retail Trial Analysis
 
+<a href="https://github.com/taystantim/-Chip-Category-Trial-Analysis" target="_blank">
+  <button>View Project Code</button>
+</a>
+
 ### Business Question
 
 Did a store-level chip trial generate a true performance uplift, and which customer segments drive category growth?
@@ -48,6 +52,10 @@ This framework provides a structured approach for evaluating retail trials with 
 
 # Forecasting New York Harbor Gas Prices
 
+<a href="https://github.com/taystantim/gas-price-forecasting" target="_blank">
+  <button>View Project Code</button>
+</a>
+
 ### Business Question
 
 Can historical price patterns and volatility behavior improve short-term fuel price forecasting?
@@ -81,6 +89,10 @@ This chart highlights major structural breaks in the gas price series, including
 - Out-of-sample validation yielded RMSE ≈ 0.047, indicating strong short-term predictive performance relative to weekly price variation.
 
 # Predicting Conservative Vote Share in the Canadian Federal Election
+
+<a href="https://github.com/taystantim/Predicting-Conservative-Vote-Share-in-the-Canadian-Federal-Election" target="_blank">
+  <button>View Project Code</button>
+</a>
 
 ### Business Question
 

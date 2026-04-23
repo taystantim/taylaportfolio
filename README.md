@@ -8,10 +8,20 @@ I’m looking to start my career in data analytics, where I can keep building my
 
 # Featured Projects 
 
-- Retail Trial Analysis (Excel) 
-- Gas Price Forecasting (R) 
-- Election Vote Modeling (R)
-- Modeling House Prices (R) 
+<div class="project-card">
+  <h3>Retail Trial Analysis</h3>
+  <p class="tools">Excel | Retail Analytics</p>
+
+  <p>
+    Evaluated whether a store-level chip trial generated measurable uplift using control store comparisons.
+  </p>
+
+  <p><strong>Key Result:</strong> 13% uplift and ~$324 incremental revenue.</p>
+
+  <div class="card-buttons">
+    <a href="https://github.com/taystantim/-Chip-Category-Trial-Analysis" class="btn" target="_blank">View Project</a>
+  </div>
+</div>
 
 # Retail Trial Analysis
 

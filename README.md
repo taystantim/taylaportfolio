@@ -31,12 +31,6 @@ I analyzed supermarket transaction and customer data to evaluate a store-level c
 - Selected control stores using historical sales patterns
 - Compared trial stores against scaled controls
 - Used confidence intervals to assess whether uplift was statistically meaningful
-
-#### Approach
-- Cleaned and merged transaction + customer datasets
-- Identified key customer segments (life stage × affluence)
-- Selected comparable control stores using historical sales trends
-- Measured uplift using scaled comparisons and confidence intervals
   
 #### Sales Contribution by Customer Segment
 

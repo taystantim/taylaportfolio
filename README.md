@@ -20,40 +20,40 @@ I’m looking to start my career in data analytics, where I can keep building my
   <button>View Full Project</button>
 </a>
 
-### Business Question
+#### Business Question
 
 Did a store-level chip trial generate a true performance uplift, and which customer segments drive category growth?
 
-### Context
+#### Context
 
 Using transaction-level and customer segmentation data, I evaluated purchasing behaviour and measured trial performance against carefully selected control stores. The analysis was completed entirely in Excel to simulate a real-world retail analytics workflow.
 
-### Approach
+#### Approach
 - Cleaned and merged transaction + customer datasets
 - Identified key customer segments (life stage × affluence)
 - Selected comparable control stores using historical sales trends
 - Measured uplift using scaled comparisons and confidence intervals
   
-### Sales Contribution by Customer Segment
+#### Sales Contribution by Customer Segment
 
 <img src="images/lifestage.png" width="500">
 
 Mainstream products dominate chip sales across most life stages, with particularly strong performance among Older Families and Young Singles/Couples.
 
-### Trial vs Control Comparison
+#### Trial vs Control Comparison
 
 <img src="images/trialsales.png" width="500">
 
 The trial generated approximately $324 in incremental revenue over the 3-month period for Store 86, representing a 13% uplift in category sales. The trial effect exceeded 3.05 standard deviations above historical pre-trial variation, indicating a large and statistically meaningful impact.
 
-### Recommendations 
+#### Recommendations 
 
 - Roll out the trial selectively to stores with similar customer profiles
 - Focus expansion on stores most comparable to the strongest-performing trial store
 - Use further trials to test pricing or promotional strategies
 - Continue monitoring performance to ensure consistent execution
 
-### Business Impact 
+#### Business Impact 
 
 This framework provides a structured approach for evaluating retail trials with statistical confidence before large-scale rollout.
 
@@ -65,33 +65,33 @@ This framework provides a structured approach for evaluating retail trials with 
   <button>View Full Project</button>
 </a>
 
-### Business Question
+#### Business Question
 
 Can historical price patterns and volatility behavior improve short-term fuel price forecasting?
 
-### Context
+#### Context
 
 Using 40 years of weekly gasoline price data, I modeled price trends and volatility dynamics to evaluate forecast reliability and market risk persistence.
 
-### New York Harbor Gas Prices 1988-2026
+#### New York Harbor Gas Prices 1988-2026
 
 <img src="images/gasforecast.png" width="500">
 
 This plot shows the ARIMA-based forecast of weekly New York gas prices, including a 95% prediction interval. The widening confidence band reflects increasing uncertainty over longer forecast horizons. The model captures long-term persistence in prices while acknowledging the high variability characteristic of energy markets.
 
-### Structural Breaks in Gas Prices
+#### Structural Breaks in Gas Prices
 
 <img src="images/plot4_structural_breaks.png" width="500">
 
 This chart highlights major structural breaks in the gas price series, including the 2008 financial crisis, the 2020 COVID shock, and the 2022 geopolitical energy shock. These regime shifts explain large deviations from historical trends and reinforce the importance of modeling both mean dynamics and volatility.
-### Approach
+#### Approach
 
 - Log transformation + differencing to achieve stationarity
 - ARIMA modeling for mean dynamics
 - Rolling out-of-sample validation
 - GARCH(1,1) modeling to capture volatility clustering
 
-### Insights 
+#### Insights 
 - Gas prices exhibit statistically significant volatility clustering, indicating persistent risk shocks.
 - GARCH(1,1) results show volatility persistence (α + β ≈ 0.97), with shocks decaying over approximately 8 weeks, indicating prolonged periods of elevated risk.
 - Forecast uncertainty expands rapidly during turbulent periods.
@@ -105,38 +105,38 @@ This chart highlights major structural breaks in the gas price series, including
   <button>View Full Project</button>
 </a>
 
-### Business Question
+#### Business Question
 
 What proportion of voters are expected to support the Conservative Party based on demographic patterns?
 
-### Data Used
+#### Data Used
 
 2019 Canadian Election Study (CES) – voter demographics and party preference
 2017 General Social Survey (GSS) – population demographics for weighting
 
-### What I Did
+#### What I Did
 
 Using survey data and census-based population weighting, I built a logistic regression model to estimate national Conservative vote share.
 
-### Provincial Weight Distribution
+#### Provincial Weight Distribution
 
 <img src="images/election1.png" width="500">
 
 Ontario and Quebec heavily influence national vote share due to population size.
 
-### Gender vs Conservative Support
+#### Gender vs Conservative Support
 
 <img src="images/election2.png" width="500">
 
 Male respondents showed a higher support rate (41%) compared to females (29%), suggesting gender plays a meaningful role in conservative voting probability.
 
-### Conservative Support by Province
+#### Conservative Support by Province
 
 <img src="images/agegroup.png" width="500">
 
 Conservative support increases with age, peaking around 40% among respondents aged 51–68.
 
-### Key Result
+#### Key Result
 
 The model estimated approximately 34.7% Conservative vote share, after applying provincial demographic weighting.
 
@@ -144,17 +144,17 @@ The model estimated approximately 34.7% Conservative vote share, after applying 
 
 # Video Project: Selecting the Best Predictor for the Median Housing Value of Calfornia Homes 
 
-### Business Question
+#### Business Question
 
 Which variable best predicts median home value across California districts?
 
-### Overview 
+#### Overview 
 
 Using regression analysis, I evaluated multiple predictors and assessed model performance to determine the strongest explanatory variable.
 
 [<img src="images/calproj.png" width="500">](https://youtu.be/qNsJqWcyhRY)
 
-### Key Insight
+#### Key Insight
 
 Median income emerged as the strongest predictor of housing value, explaining a substantial proportion of variance across districts.
 

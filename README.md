@@ -97,7 +97,7 @@ This chart highlights major structural breaks in the gas price series, including
 
 #### Tools 
 
-R, time series analysis, ARIMA/SARIMA, forecasting, residual diagnostics
+R (forecast, tseries, rugarch), ARIMA, GARCH, time series analysis, model diagnostics
 
 
 # Predicting Conservative Vote Share in the Canadian Federal Election

@@ -14,7 +14,7 @@ I’m looking to start my career in data analytics, where I can keep building my
 - Election Vote Modeling (R)
 - Modeling House Prices (R) 
 
-# Retail Trial Analysis
+# Retail Trial Analysis 
 
 <a href="https://github.com/taystantim/-Chip-Category-Trial-Analysis" target="_blank">
   <button>View Full Project</button>
@@ -35,12 +35,14 @@ Using transaction-level and customer segmentation data, I evaluated purchasing b
 - Measured uplift using scaled comparisons and confidence intervals
   
 ### Sales Contribution by Customer Segment
-![Alt text](images/lifestage.png)
+
+<img src="images/lifestage.png" width="500">
 
 Mainstream products dominate chip sales across most life stages, with particularly strong performance among Older Families and Young Singles/Couples.
 
 ### Trial vs Control Comparison
-![Alt text](images/trialsales.png)
+
+<img src="images/trialsales.png" width="500">
 
 The trial generated approximately $324 in incremental revenue over the 3-month period for Store 86, representing a 13% uplift in category sales. The trial effect exceeded 3.05 standard deviations above historical pre-trial variation, indicating a large and statistically meaningful impact.
 
@@ -73,13 +75,13 @@ Using 40 years of weekly gasoline price data, I modeled price trends and volatil
 
 ### New York Harbor Gas Prices 1988-2026
 
-![Alt text](images/gasforecast.png)
+<img src="images/gasforecast.png" width="500">
 
 This plot shows the ARIMA-based forecast of weekly New York gas prices, including a 95% prediction interval. The widening confidence band reflects increasing uncertainty over longer forecast horizons. The model captures long-term persistence in prices while acknowledging the high variability characteristic of energy markets.
 
 ### Structural Breaks in Gas Prices
 
-![Alt text](images/plot4_structural_breaks.png)
+<img src="images/plot4_structural_breaks.png" width="500">
 
 This chart highlights major structural breaks in the gas price series, including the 2008 financial crisis, the 2020 COVID shock, and the 2022 geopolitical energy shock. These regime shifts explain large deviations from historical trends and reinforce the importance of modeling both mean dynamics and volatility.
 ### Approach
@@ -117,17 +119,20 @@ What proportion of voters are expected to support the Conservative Party based o
 Using survey data and census-based population weighting, I built a logistic regression model to estimate national Conservative vote share.
 
 ### Provincial Weight Distribution
-![Alt text](images/election1.png)
+
+<img src="images/election1.png" width="500">
 
 Ontario and Quebec heavily influence national vote share due to population size.
 
 ### Gender vs Conservative Support
-![Alt text](images/election2.png)
+
+<img src="images/election2.png" width="500">
 
 Male respondents showed a higher support rate (41%) compared to females (29%), suggesting gender plays a meaningful role in conservative voting probability.
 
 ### Conservative Support by Province
-![Alt text](images/agegroup.png)
+
+<img src="images/agegroup.png" width="500">
 
 Conservative support increases with age, peaking around 40% among respondents aged 51–68.
 
@@ -147,7 +152,7 @@ Which variable best predicts median home value across California districts?
 
 Using regression analysis, I evaluated multiple predictors and assessed model performance to determine the strongest explanatory variable.
 
-[<img src="images/calproj.png">](https://youtu.be/qNsJqWcyhRY)
+[<img src="images/calproj.png" width="500">](https://youtu.be/qNsJqWcyhRY)
 
 ### Key Insight
 

@@ -70,11 +70,11 @@ This project analyzed historical New York Harbor gasoline prices and built time-
 
 #### What I did 
 
-- Explored trend and seasonality
-- Differenced the series to achieve stationarity
-- Used ACF and PACF to guide model selection
-- Compared ARIMA and seasonal ARIMA models
-- Generated 10-week forecasts with prediction intervals
+- Applied log transformation and differencing to achieve stationarity (ADF testing)
+- Compared multiple ARIMA models and selected the best fit using AIC
+- Evaluated model performance using rolling one-step forecasts
+- Performed residual diagnostics (Ljung-Box test) to validate model assumptions
+- Modeled volatility using GARCH(1,1) to capture clustering and persistence
 
 #### New York Harbor Gas Prices 1988-2026
 
@@ -90,9 +90,10 @@ This chart highlights major structural breaks in the gas price series, including
 
 #### Key Results 
 
-- Produced short-term forecasts for 2010 gasoline prices using ARIMA(2,1,2) × (0,1,1)₅₂ model
-- Forecast uncertainty widened quickly over time
-- Results showed the difficulty of long-range commodity forecasting
+- Selected ARIMA(4,1,1) as the best-performing model based on AIC
+- Achieved strong short-term accuracy (RMSE ≈ 0.047)
+- Identified significant volatility clustering (ARCH test p < 0.001)
+- Estimated volatility shock half-life of ~8 weeks, indicating persistent risk
 
 #### Tools 
 

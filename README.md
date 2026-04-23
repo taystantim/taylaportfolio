@@ -20,13 +20,17 @@ I’m looking to start my career in data analytics, where I can keep building my
   <button>View Full Project</button>
 </a>
 
-#### Business Question
+#### Overview
 
-Did a store-level chip trial generate a true performance uplift, and which customer segments drive category growth?
+I analyzed supermarket transaction and customer data to evaluate a store-level chip trial and identify which customer groups drove sales growth. The analysis was completed in Excel using control store comparisons and confidence intervals.
 
-#### Context
+#### What I Did
 
-Using transaction-level and customer segmentation data, I evaluated purchasing behaviour and measured trial performance against carefully selected control stores. The analysis was completed entirely in Excel to simulate a real-world retail analytics workflow.
+- Cleaned and merged transaction and customer datasets
+- Analyzed chip sales by life stage and affluence
+- Selected control stores using historical sales patterns
+- Compared trial stores against scaled controls
+- Used confidence intervals to assess whether uplift was statistically meaningful
 
 #### Approach
 - Cleaned and merged transaction + customer datasets
@@ -46,18 +50,19 @@ Mainstream products dominate chip sales across most life stages, with particular
 
 The trial generated approximately $324 in incremental revenue over the 3-month period for Store 86, representing a 13% uplift in category sales. The trial effect exceeded 3.05 standard deviations above historical pre-trial variation, indicating a large and statistically meaningful impact.
 
-#### Recommendations 
+#### Key Insights 
 
-- Roll out the trial selectively to stores with similar customer profiles
-- Focus expansion on stores most comparable to the strongest-performing trial store
-- Use further trials to test pricing or promotional strategies
-- Continue monitoring performance to ensure consistent execution
+- Mainstream and Budget families contributed the largest share of chip sales
+- Budget customers purchased more frequently at lower price points
+- The trial produced statistically significant uplift in some stores
 
 #### Business Impact 
 
-This framework provides a structured approach for evaluating retail trials with statistical confidence before large-scale rollout.
+Demonstrates how trial performance can be evaluated before rollout using structured analysis and statistical validation.
 
+#### Tools 
 
+Excel, data cleaning, PivotTables, aggregation, control group analysis, confidence intervals
 
 # Forecasting New York Harbor Gas Prices
 
@@ -65,13 +70,17 @@ This framework provides a structured approach for evaluating retail trials with 
   <button>View Full Project</button>
 </a>
 
-#### Business Question
+#### Overview
 
-Can historical price patterns and volatility behavior improve short-term fuel price forecasting?
+This project analyzed historical New York Harbor gasoline prices and built time-series models to forecast short-term price movements.
 
-#### Context
+#### What I did 
 
-Using 40 years of weekly gasoline price data, I modeled price trends and volatility dynamics to evaluate forecast reliability and market risk persistence.
+- Explored trend and seasonality
+- Differenced the series to achieve stationarity
+- Used ACF and PACF to guide model selection
+- Compared ARIMA and seasonal ARIMA models
+- Generated 10-week forecasts with prediction intervals
 
 #### New York Harbor Gas Prices 1988-2026
 
@@ -84,19 +93,16 @@ This plot shows the ARIMA-based forecast of weekly New York gas prices, includin
 <img src="images/plot4_structural_breaks.png" width="500">
 
 This chart highlights major structural breaks in the gas price series, including the 2008 financial crisis, the 2020 COVID shock, and the 2022 geopolitical energy shock. These regime shifts explain large deviations from historical trends and reinforce the importance of modeling both mean dynamics and volatility.
-#### Approach
 
-- Log transformation + differencing to achieve stationarity
-- ARIMA modeling for mean dynamics
-- Rolling out-of-sample validation
-- GARCH(1,1) modeling to capture volatility clustering
+#### Key Results 
 
-#### Insights 
-- Gas prices exhibit statistically significant volatility clustering, indicating persistent risk shocks.
-- GARCH(1,1) results show volatility persistence (α + β ≈ 0.97), with shocks decaying over approximately 8 weeks, indicating prolonged periods of elevated risk.
-- Forecast uncertainty expands rapidly during turbulent periods.
-- Out-of-sample validation yielded RMSE ≈ 0.047, indicating strong short-term predictive performance relative to weekly price variation.
+- Produced short-term forecasts for 2010 gasoline prices using ARIMA(2,1,2) × (0,1,1)₅₂ model
+- Forecast uncertainty widened quickly over time
+- Results showed the difficulty of long-range commodity forecasting
 
+#### Tools 
+
+R, time series analysis, ARIMA/SARIMA, forecasting, residual diagnostics
 
 
 # Predicting Conservative Vote Share in the Canadian Federal Election
@@ -105,18 +111,16 @@ This chart highlights major structural breaks in the gas price series, including
   <button>View Full Project</button>
 </a>
 
-#### Business Question
+#### Overview
 
-What proportion of voters are expected to support the Conservative Party based on demographic patterns?
-
-#### Data Used
-
-2019 Canadian Election Study (CES) – voter demographics and party preference
-2017 General Social Survey (GSS) – population demographics for weighting
+This project used Canadian election and census data to estimate Conservative vote share using logistic regression and demographic weighting.
 
 #### What I Did
 
-Using survey data and census-based population weighting, I built a logistic regression model to estimate national Conservative vote share.
+- Cleaned and recoded survey variables
+- Built a logistic regression model for Conservative support
+- Applied provincial demographic weighting
+- Visualized age, gender, and regional voting patterns
 
 #### Provincial Weight Distribution
 
@@ -136,21 +140,28 @@ Male respondents showed a higher support rate (41%) compared to females (29%), s
 
 Conservative support increases with age, peaking around 40% among respondents aged 51–68.
 
-#### Key Result
+#### Key Results
 
-The model estimated approximately 34.7% Conservative vote share, after applying provincial demographic weighting.
+- Estimated 34.7% Conservative vote share
+- Found that province size strongly affects national outcomes
+- Identified meaningful differences in support by age and gender
 
+#### Tools 
+
+R, logistic regression, weighting, survey data analysis, data visualization
 
 
 # Video Project: Selecting the Best Predictor for the Median Housing Value of Calfornia Homes 
 
-#### Business Question
-
-Which variable best predicts median home value across California districts?
-
 #### Overview 
 
-Using regression analysis, I evaluated multiple predictors and assessed model performance to determine the strongest explanatory variable.
+This project used regression analysis to identify which variable best predicts median housing value across California districts.
+
+#### What I Did 
+
+- Compared multiple predictors using regression analysis
+- Evaluated model fit and explanatory power
+- Identified the strongest predictor of housing value
 
 [<img src="images/calproj.png" width="500">](https://youtu.be/qNsJqWcyhRY)
 
@@ -158,5 +169,8 @@ Using regression analysis, I evaluated multiple predictors and assessed model pe
 
 Median income emerged as the strongest predictor of housing value, explaining a substantial proportion of variance across districts.
 
+#### Tools 
+
+R, regression analysis, model evaluation, data visualization
 
 

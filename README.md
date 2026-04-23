@@ -1,4 +1,3 @@
-# Tayla's Data Projects
 ## About me 
 
 I’m a Statistics graduate from the University of Toronto with a strong interest in data analysis.

@@ -1,4 +1,5 @@
-# About me 
+# Tayla's Data Projects
+## About me 
 
 I’m a Statistics graduate from the University of Toronto with a strong interest in data analysis.
 
@@ -6,22 +7,12 @@ I’ve worked with Excel, R, SQL, and Python to analyze datasets, build models, 
 
 I’m looking to start my career in data analytics, where I can keep building my skills and contribute to real business problems.
 
-# Featured Projects 
+## Featured Projects 
 
-<div class="project-card">
-  <h3>Retail Trial Analysis</h3>
-  <p class="tools">Excel | Retail Analytics</p>
-
-  <p>
-    Evaluated whether a store-level chip trial generated measurable uplift using control store comparisons.
-  </p>
-
-  <p><strong>Key Result:</strong> 13% uplift and ~$324 incremental revenue.</p>
-
-  <div class="card-buttons">
-    <a href="https://github.com/taystantim/-Chip-Category-Trial-Analysis" class="btn" target="_blank">View Project</a>
-  </div>
-</div>
+- Retail Trial Analysis (Excel) 
+- Gas Price Forecasting (R) 
+- Election Vote Modeling (R)
+- Modeling House Prices (R) 
 
 # Retail Trial Analysis
 
@@ -64,6 +55,8 @@ The trial generated approximately $324 in incremental revenue over the 3-month p
 
 This framework provides a structured approach for evaluating retail trials with statistical confidence before large-scale rollout.
 
+
+
 # Forecasting New York Harbor Gas Prices
 
 <a href="https://github.com/taystantim/gas-price-forecasting" target="_blank">
@@ -102,6 +95,8 @@ This chart highlights major structural breaks in the gas price series, including
 - Forecast uncertainty expands rapidly during turbulent periods.
 - Out-of-sample validation yielded RMSE ≈ 0.047, indicating strong short-term predictive performance relative to weekly price variation.
 
+
+
 # Predicting Conservative Vote Share in the Canadian Federal Election
 
 <a href="https://github.com/taystantim/Predicting-Conservative-Vote-Share-in-the-Canadian-Federal-Election" target="_blank">
@@ -139,6 +134,8 @@ Conservative support increases with age, peaking around 40% among respondents ag
 ### Key Result
 
 The model estimated approximately 34.7% Conservative vote share, after applying provincial demographic weighting.
+
+
 
 # Video Project: Selecting the Best Predictor for the Median Housing Value of Calfornia Homes 
 

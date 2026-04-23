@@ -36,13 +36,13 @@ I analyzed supermarket transaction and customer data to evaluate a store-level c
 
 <img src="images/lifestage.png" width="500">
 
-Mainstream products dominate chip sales across most life stages, with particularly strong performance among Older Families and Young Singles/Couples.
+Mainstream products dominate chip sales, especially among Older Families and Young Singles/Couples.
 
 #### Trial vs Control Comparison
 
 <img src="images/trialsales.png" width="500">
 
-The trial generated approximately $324 in incremental revenue over the 3-month period for Store 86, representing a 13% uplift in category sales. The trial effect exceeded 3.05 standard deviations above historical pre-trial variation, indicating a large and statistically meaningful impact.
+The trial generated ~$324 in incremental revenue over 3 months, representing a 13% uplift. The effect exceeded 3.05 standard deviations above pre-trial variation, indicating a statistically significant impact.
 
 #### Key Insights 
 
@@ -66,27 +66,26 @@ Excel, data cleaning, PivotTables, aggregation, control group analysis, confiden
 
 #### Overview
 
-This project analyzed historical New York Harbor gasoline prices and built time-series models to forecast short-term price movements.
+Analyzed long-term gasoline price data to model price trends and volatility, using time series methods to improve short-term forecasting and understand risk dynamics.
 
 #### What I did 
 
-- Applied log transformation and differencing to achieve stationarity (ADF testing)
-- Compared multiple ARIMA models and selected the best fit using AIC
-- Evaluated model performance using rolling one-step forecasts
-- Performed residual diagnostics (Ljung-Box test) to validate model assumptions
-- Modeled volatility using GARCH(1,1) to capture clustering and persistence
+- Selected ARIMA(4,1,1) based on AIC
+- Achieved strong short-term accuracy (RMSE ≈ 0.047)
+- Identified significant volatility clustering (ARCH test p < 0.001)
+- Estimated volatility shock half-life of ~8 weeks
 
 #### New York Harbor Gas Prices 1988-2026
 
 <img src="images/gasforecast.png" width="500">
 
-This plot shows the ARIMA-based forecast of weekly New York gas prices, including a 95% prediction interval. The widening confidence band reflects increasing uncertainty over longer forecast horizons. The model captures long-term persistence in prices while acknowledging the high variability characteristic of energy markets.
+ARIMA-based forecast of weekly gas prices with 95% prediction intervals. Uncertainty increases over longer horizons
 
 #### Structural Breaks in Gas Prices
 
 <img src="images/plot4_structural_breaks.png" width="500">
 
-This chart highlights major structural breaks in the gas price series, including the 2008 financial crisis, the 2020 COVID shock, and the 2022 geopolitical energy shock. These regime shifts explain large deviations from historical trends and reinforce the importance of modeling both mean dynamics and volatility.
+This chart highlights major structural breaks in the gas price series, including the 2008 financial crisis, the 2020 COVID shock, and the 2022 geopolitical energy shock. 
 
 #### Key Results 
 
@@ -127,7 +126,7 @@ Ontario and Quebec heavily influence national vote share due to population size.
 
 <img src="images/election2.png" width="500">
 
-Male respondents showed a higher support rate (41%) compared to females (29%), suggesting gender plays a meaningful role in conservative voting probability.
+Male respondents showed higher support (41%) than females (29%), indicating a gender gap in voting behaviour.
 
 #### Conservative Support by Province
 
@@ -150,7 +149,7 @@ R, logistic regression, weighting, survey data analysis, data visualization
 
 #### Overview 
 
-This project used regression analysis to identify which variable best predicts median housing value across California districts.
+Analyzed California housing data using regression to identify key drivers median housing value across California districts.
 
 #### What I Did 
 

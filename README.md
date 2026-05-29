@@ -44,7 +44,7 @@ Average compensation varied across programming languages, with Swift and Python 
 
 #### Remote Work Distribution by Region
 
-<img src="images/salarylang.png" width="500">
+<img src="images/remote.png" width="500">
 
 #### Key Results
 

@@ -46,6 +46,8 @@ Average compensation varied across programming languages, with Swift and Python 
 
 <img src="images/remote.png" width="500">
 
+Remote work preferences varied substantially across regions, with some countries showing much higher adoption of fully remote work than others.
+
 #### Key Results
 
 - JavaScript remained the most widely used programming language among respondents

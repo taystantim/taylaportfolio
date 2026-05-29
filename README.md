@@ -56,7 +56,7 @@ Python, JavaScript, and emerging technologies showed strong future interest amon
 
 #### Tools 
 
-Python (Pandas), SQL, Google Looker Studio, Data Cleaning, Data Wrangling, Exploratory Data Analysis, Dashboard Development, Data Visualization
+Python (Pandas, Requests, BeautifulSoup), SQL, APIs, Web Scraping, Google Looker Studio, Data Cleaning, Data Wrangling, Exploratory Data Analysis, Dashboard Development, Data Visualization
 
 #### Business Impact 
 

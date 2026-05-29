@@ -32,19 +32,19 @@ Analyzed data from the Stack Overflow Developer Survey to identify emerging tren
 
 #### Most Popular Programming Languages
 
-<img src="images/lifestage.png" width="500">
+<img src="images/popularlang.png" width="500">
 
 JavaScript and Python remained among the most widely used programming languages, highlighting their continued importance across the industry.
 
 #### Most Desired Programming Languages
 
-<img src="images/lifestage.png" width="500">
+<img src="images/interest.png" width="500">
 
 Python, JavaScript, and emerging technologies showed strong future interest among developers.
 
 #### Average Annual Salary by Programming Language
 
-<img src="images/lifestage.png" width="500">
+<img src="images/salarylang.png" width="500">
 
 #### Key Results
 

@@ -30,19 +30,19 @@ Analyzed data from the Stack Overflow Developer Survey to identify emerging tren
 - Designed interactive dashboards in Google Looker Studio
 - Communicated findings and recommendations through a PowerPoint presentation
 
-#### Most Popular Programming Languages
-
-<img src="images/popularlang.png" width="500">
-
-JavaScript and Python remained among the most widely used programming languages, highlighting their continued importance across the industry.
-
-#### Most Desired Programming Languages
+#### Programming Languages Developers Want to Work With
 
 <img src="images/interest.png" width="500">
 
-Python, JavaScript, and emerging technologies showed strong future interest among developers.
+Python, JavaScript, and SQL ranked among the most desired technologies, highlighting continued demand for data and web development skills.
 
 #### Average Annual Salary by Programming Language
+
+<img src="images/salarylang.png" width="500">
+
+Average compensation varied across programming languages, with Swift and Python associated with the highest reported salaries.
+
+#### Remote Work Distribution by Region
 
 <img src="images/salarylang.png" width="500">
 

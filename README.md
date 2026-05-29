@@ -9,10 +9,54 @@ I’m looking to start my career in data analytics, where I can keep building my
 
 ## Featured Projects 
 
+- Developer Technology Trends Analysis (Python, SQL)
 - Retail Trial Analysis (Excel) 
 - Gas Price Forecasting (R) 
 - Election Vote Modeling (R)
 - Modeling House Prices (R) 
+
+# Developer Technology Trends Analysis
+
+#### Overview 
+
+Analyzed data from the Stack Overflow Developer Survey to identify emerging trends in programming languages, databases, compensation, and job satisfaction. The project involved cleaning and preparing survey data, performing exploratory analysis, building dashboards, and presenting findings to stakeholders.
+
+#### What I Did
+
+- Gathered and integrated data from APIs, web scraping, and survey datasets
+- Cleaned, transformed, and validated data using Python and Pandas
+- Performed exploratory data analysis and trend identification using SQL and Python
+- Analyzed programming language, database, compensation, and job satisfaction trends
+- Designed interactive dashboards in Google Looker Studio
+- Communicated findings and recommendations through a PowerPoint presentation
+
+#### Most Popular Programming Languages
+
+JavaScript and Python remained among the most widely used programming languages, highlighting their continued importance across the industry.
+
+#### Most Desired Programming Languages
+
+Python, JavaScript, and emerging technologies showed strong future interest among developers.
+
+#### Average Annual Salary by Programming Language
+
+
+
+#### Key Results
+
+- JavaScript remained the most widely used programming language among respondents
+- Python continued to show strong demand among developers
+- PostgreSQL and MySQL were among the most commonly used databases
+- Compensation and job satisfaction varied significantly across respondent groups
+- Emerging technologies showed growing interest among developers planning future career development
+
+#### Tools 
+
+Python (Pandas), SQL, Google Looker Studio, Data Cleaning, Data Wrangling, Exploratory Data Analysis, Dashboard Development, Data Visualization
+
+#### Business Impact 
+
+Demonstrates how survey data can be transformed into actionable insights to support workforce planning, technology strategy, and skills development decisions.
 
 # Retail Trial Analysis 
 
